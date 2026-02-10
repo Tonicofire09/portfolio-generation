@@ -13,7 +13,7 @@ export function Contact() {
   const [sending, setSending] = useState(false)
   const [sent, setSent] = useState(false)
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setSending(true)
     const form = e.currentTarget
@@ -22,26 +22,34 @@ export function Contact() {
     const email = data.get("email") as string
     const message = data.get("message") as string
 
-    // Open mailto with pre-filled data
-    const subject = encodeURIComponent(`Contact from Portfolio - ${name}`)
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)
-    window.open(`mailto:antoniohenriquekiepert@gmail.com?subject=${subject}&body=${body}`, "_self")
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      })
 
-    setTimeout(() => {
+      if (response.ok) {
+        setSent(true)
+        form.reset()
+        setTimeout(() => setSent(false), 6000)
+      } else {
+        alert("Failed to send message. Please try again.")
+      }
+    } catch (error) {
+      console.error("Error sending message:", error)
+      alert("Failed to send message. Please try again.")
+    } finally {
       setSending(false)
-      setSent(true)
-      form.reset()
-      setTimeout(() => setSent(false), 4000)
-    }, 1000)
+    }
   }
 
   return (
     <section id="contact" className="py-24">
       <div ref={ref} className="max-w-2xl mx-auto">
         <div
-          className={`text-center mb-10 transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className={`text-center mb-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
         >
           <p className="font-mono text-primary text-sm mb-4">
             {t.sectionNumber} {t.sectionLabel}
@@ -55,9 +63,8 @@ export function Contact() {
         {/* Contact form */}
         <form
           onSubmit={handleSubmit}
-          className={`space-y-4 mb-10 transition-all duration-700 delay-200 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className={`space-y-4 mb-10 transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
         >
           <div className="grid sm:grid-cols-2 gap-4">
             <input
@@ -92,16 +99,24 @@ export function Contact() {
               <Send className="h-4 w-4" />
             </button>
             {sent && (
-              <p className="mt-3 text-primary font-mono text-xs">{t.formSuccess}</p>
+              <div className="mt-4 p-4 bg-primary/10 border border-primary/20 rounded-lg">
+                <p className="text-primary font-mono text-sm mb-3">{t.formSuccess}</p>
+                <a
+                  href="/antonio-kiepert-cv.pdf"
+                  download
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-lg font-mono text-sm font-medium hover:bg-primary/90 transition-colors"
+                >
+                  {t.downloadCv}
+                </a>
+              </div>
             )}
           </div>
         </form>
 
         {/* Direct contact channels */}
         <div
-          className={`transition-all duration-700 delay-300 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className={`transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
         >
           <p className="text-center text-muted-foreground text-sm mb-4">{t.orReach}</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
