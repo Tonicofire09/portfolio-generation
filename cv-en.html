@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antonio Kiepert - Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: white;
+            font-size: 10pt;
+        }
+
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 15mm;
+        }
+
+        header {
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f97316;
+            padding-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 28pt;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+            background: linear-gradient(135deg, #f97316 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 13pt;
+            color: #f97316;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 9pt;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        .contact-info a {
+            color: #f97316;
+            text-decoration: none;
+        }
+
+        .section {
+            margin-bottom: 18px;
+        }
+
+        .section-title {
+            font-size: 14pt;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #f3e8ff 100%);
+            border-left: 3px solid #f97316;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-size: 9.5pt;
+            line-height: 1.5;
+        }
+
+        .highlight-box strong {
+            color: #f97316;
+            font-weight: 600;
+        }
+
+        .experience-item {
+            margin-bottom: 15px;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .job-title {
+            font-size: 11pt;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .period {
+            font-size: 9pt;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .company {
+            font-size: 10pt;
+            color: #f97316;
+            font-weight: 500;
+            margin-bottom: 3px;
+        }
+
+        .description {
+            font-size: 9pt;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 6px;
+        }
+
+        ul {
+            margin-left: 18px;
+            margin-top: 6px;
+        }
+
+        li {
+            margin-bottom: 4px;
+            font-size: 9.5pt;
+            line-height: 1.4;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .skill-category {
+            background: #f9fafb;
+            padding: 10px;
+            border-radius: 4px;
+            border-left: 2px solid #f97316;
+        }
+
+        .skill-category h4 {
+            font-size: 10pt;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+
+        .skill-category p {
+            font-size: 9pt;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .languages {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .language-item {
+            font-size: 9.5pt;
+            padding: 6px 10px;
+            background: #f9fafb;
+            border-radius: 4px;
+        }
+
+        .language-item strong {
+            color: #f97316;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .container {
+                padding: 0;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Antonio Kiepert</h1>
+            <div class="subtitle">Marketing Manager | Growth & Paid Media Specialist</div>
+            <div class="contact-info">
+                <span>📧 <a href="mailto:antonio@slabware.com">antonio@slabware.com</a></span>
+                <span>📱 WhatsApp: +55 (47) 99999-9999</span>
+                <span>🔗 <a href="https://linkedin.com/in/antoniokiepert">linkedin.com/in/antoniokiepert</a></span>
+                <span>🌐 Porto Alegre, RS - Brazil</span>
+            </div>
+        </header>
+
+        <div class="highlight-box">
+            <p><strong>🌎 International Experience:</strong> 9 years living in the United States with fluent English
+                (native level). Active experience managing simultaneous marketing campaigns for American and Brazilian
+                markets.</p>
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p>Marketing Manager specialized in <strong>Growth, Paid Media & Automation</strong> for SaaS and B2B
+                companies. I combine strategic vision, hands-on execution, and technical capability to build scalable
+                growth systems. I lead end-to-end marketing operations — from demand generation to product-led growth —
+                with a global mindset and data-driven execution.</p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Professional Experience</h2>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="job-title">Marketing Manager</div>
+                    <div class="period">May 2025 - Present</div>
+                </div>
+                <div class="company">SlabWare · https://slabware.com</div>
+                <div class="description">SaaS for the stone industry | US & Brazil markets</div>
+                <ul>
+                    <li>Lead end-to-end marketing operations: demand gen, paid media, automation, onboarding and
+                        product-led growth</li>
+                    <li><strong>150%+ ROI</strong> in Paid Media after complete strategy restructuring (Meta Ads +
+                        Google Ads + YouTube Ads)</li>
+                    <li><strong>40% CAC reduction</strong> while maintaining lead volume and quality</li>
+                    <li>Implemented Zoho CRM as the complete sales and marketing stack, configuring pipelines,
+                        automations and dashboards</li>
+                    <li>Designed complete Free Trial funnel: from acquisition to automated onboarding and retention</li>
+                    <li>Built automation workflows with n8n for lifecycle marketing, lead scoring and customer success
+                    </li>
+                    <li>Developed lead mining system and email dispatcher integrated with CRM for sales team</li>
+                    <li>Created production control dashboard using React, TypeScript and Supabase</li>
+                    <li><strong>Manage simultaneous campaigns for US and Brazilian markets</strong> with localized copy,
+                        creatives and segmentation</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="job-title">Video Editor & Motion Designer</div>
+                    <div class="period">September 2024 - July 2025</div>
+                </div>
+                <div class="company">SlabWare</div>
+                <div class="description">Creative production for ads and onboarding</div>
+                <ul>
+                    <li>Produced conversion-focused video content using After Effects, Premiere and AI tools</li>
+                    <li>Created campaigns combining AI scripts, ElevenLabs voice-over and motion design for Meta and
+                        Google Ads</li>
+                    <li>Developed product tutorials and walkthroughs to support onboarding</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="job-title">Marketing Coordinator</div>
+                    <div class="period">2019 - 2022</div>
+                </div>
+                <div class="company">Feed Distributor</div>
+                <div class="description">Marketing from scratch for regional distributor</div>
+                <ul>
+                    <li>Created and implemented the entire marketing operation from scratch, including brand identity
+                        and positioning</li>
+                    <li>Developed institutional website and implemented integrated e-commerce system</li>
+                    <li>Structured brand's digital presence with SEO strategies, social media and paid campaigns</li>
+                    <li>Coordinated content production and communication materials for online and offline channels</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="job-title">Co-founder & Owner</div>
+                    <div class="period">January 2023 - December 2025</div>
+                </div>
+                <div class="company">Arara Silk</div>
+                <div class="description">Textile printing business</div>
+                <ul>
+                    <li>Co-founded and managed a textile printing business, handling operations, design and client
+                        relationships</li>
+                    <li>Applied graphic design and digital marketing to grow the brand and customer base</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="job-title">Technical Designer</div>
+                    <div class="period">November 2022 - August 2024</div>
+                </div>
+                <div class="company">Ícone Sports</div>
+                <div class="description">Graphic arts for textile sublimation</div>
+                <ul>
+                    <li>Textile sublimation and vectorization specialist, turning creative concepts into high-quality
+                        designs</li>
+                    <li>Worked with CorelDRAW and Adobe Suite for brand art production</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Growth & Demand Generation</h4>
+                    <p>Free Trials, Pipeline Generation, Revenue Marketing, Product-Led Growth, Funnel Optimization</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Paid Media & Performance</h4>
+                    <p>Meta Ads, Google Ads, YouTube Ads, A/B Testing, Audience Optimization, Analytics, ROI Management
+                    </p>
+                </div>
+                <div class="skill-category">
+                    <h4>Automation & CRM</h4>
+                    <p>Zoho CRM, n8n, Lead Scoring, Lifecycle Marketing, Email Sequences, Marketing Automation</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Creative & Production</h4>
+                    <p>Video Production, After Effects, Premiere Pro, AI Creative Tools, ElevenLabs, Copywriting</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Development & Tools</h4>
+                    <p>React, TypeScript, Supabase, n8n, Dashboards, Internal Tools, API Integration</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Design & Branding</h4>
+                    <p>CorelDRAW, Adobe Suite, Vectorization, Visual Identity, Basic UX/UI</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Languages</h2>
+            <div class="languages">
+                <div class="language-item">
+                    <strong>Portuguese:</strong> Native
+                </div>
+                <div class="language-item">
+                    <strong>English:</strong> Fluent (9 years in the US)
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="job-title">Higher Education (ongoing)</div>
+                    <div class="period">2019 - Present</div>
+                </div>
+                <div class="company">Digital Marketing & Growth</div>
+                <p style="font-size: 9pt; margin-top: 5px;">Continuous education through certifications, specialized
+                    courses and hands-on experience in digital marketing, paid media and growth hacking for SaaS/B2B.
+                </p>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

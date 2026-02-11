@@ -3,43 +3,52 @@ import { Linkedin, Mail, MessageCircle } from "lucide-react"
 export function Socials() {
   return (
     <>
-      {/* Left sidebar - Social Links */}
-      <div className="hidden lg:flex fixed bottom-0 left-8 xl:left-12 flex-col items-center gap-6 after:content-[''] after:w-px after:h-24 after:bg-muted-foreground/30">
+      {/* Left sidebar - Social Links (no line) */}
+      <div className="hidden lg:flex fixed bottom-8 left-8 xl:left-12 flex-col items-center gap-5">
         <a
           href="https://www.linkedin.com/in/antonio-kiepert"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-primary hover:-translate-y-1 transition-all"
+          className="group text-muted-foreground hover:text-primary transition-all"
           aria-label="LinkedIn"
         >
-          <Linkedin className="h-5 w-5" />
+          <div className="relative">
+            <div className="absolute -inset-2 bg-primary/0 group-hover:bg-primary/10 rounded-lg blur transition-all" />
+            <Linkedin className="relative h-5 w-5 group-hover:scale-110 transition-transform" />
+          </div>
         </a>
         <a
           href="https://wa.me/5527988770632"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-primary hover:-translate-y-1 transition-all"
+          className="group text-muted-foreground hover:text-primary transition-all"
           aria-label="WhatsApp"
         >
-          <MessageCircle className="h-5 w-5" />
+          <div className="relative">
+            <div className="absolute -inset-2 bg-primary/0 group-hover:bg-primary/10 rounded-lg blur transition-all" />
+            <MessageCircle className="relative h-5 w-5 group-hover:scale-110 transition-transform" />
+          </div>
         </a>
         <a
           href="mailto:antoniohenriquekiepert@gmail.com"
-          className="text-muted-foreground hover:text-primary hover:-translate-y-1 transition-all"
+          className="group text-muted-foreground hover:text-primary transition-all"
           aria-label="Email"
         >
-          <Mail className="h-5 w-5" />
+          <div className="relative">
+            <div className="absolute -inset-2 bg-primary/0 group-hover:bg-primary/10 rounded-lg blur transition-all" />
+            <Mail className="relative h-5 w-5 group-hover:scale-110 transition-transform" />
+          </div>
         </a>
       </div>
 
-      {/* Right sidebar - Email */}
-      <div className="hidden lg:flex fixed bottom-0 right-8 xl:right-12 flex-col items-center gap-6 after:content-[''] after:w-px after:h-24 after:bg-muted-foreground/30">
+      {/* Right sidebar - Email (no line) */}
+      <div className="hidden lg:flex fixed bottom-8 right-8 xl:right-12">
         <a
           href="mailto:antoniohenriquekiepert@gmail.com"
-          className="font-mono text-xs tracking-widest text-muted-foreground hover:text-primary transition-colors"
+          className="group font-mono text-xs tracking-widest text-muted-foreground hover:text-primary transition-all"
           style={{ writingMode: "vertical-rl" }}
         >
-          antoniohenriquekiepert@gmail.com
+          <span className="group-hover:tracking-wider transition-all">antoniohenriquekiepert@gmail.com</span>
         </a>
       </div>
     </>
