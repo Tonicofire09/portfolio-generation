@@ -5,7 +5,11 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(req: NextRequest) {
   try {
-    const { name, email, message } = await req.json()
+    const { name, email, message, lang = 'pt' } = await req.json()
+
+    const cvLink = lang === 'en'
+      ? 'https://slabware.com/antonio-kiepert-cv-en.pdf'
+      : 'https://slabware.com/antonio-kiepert-cv.pdf'
 
     // Send email to yourself (notification)
     await resend.emails.send({
@@ -85,10 +89,12 @@ export async function POST(req: NextRequest) {
           📄 Enquanto isso
         </p>
         <p style="color: #2d3748; margin: 0 0 20px; font-size: 16px;">
-          Baixe meu currículo completo em PDF
+          ${lang === 'en' ? 'Download my full resume in PDF' : 'Baixe meu currículo completo em PDF'}
         </p>
-        <a href="https://yourdomain.com/antonio-kiepert-cv.pdf" style="display: inline-block; background: linear-gradient(135deg, #4ecdc4 0%, #44a5ab 100%); color: #ffffff; padding: 14px 36px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 15px; box-shadow: 0 4px 12px rgba(78, 205, 196, 0.3);">
-          Baixar Currículo →
+
+
+        <a href="${cvLink}" style="display: inline-block; background: linear-gradient(135deg, #4ecdc4 0%, #44a5ab 100%); color: #ffffff; padding: 14px 36px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 15px; box-shadow: 0 4px 12px rgba(78, 205, 196, 0.3);">
+          ${lang === 'en' ? 'Download Resume →' : 'Baixar Currículo →'}
         </a>
       </div>
       

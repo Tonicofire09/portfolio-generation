@@ -26,7 +26,7 @@ export function Contact() {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
+        body: JSON.stringify({ name, email, message, lang }),
       })
 
       if (response.ok) {
@@ -102,7 +102,7 @@ export function Contact() {
               <div className="mt-4 p-4 bg-primary/10 border border-primary/20 rounded-lg">
                 <p className="text-primary font-mono text-sm mb-3">{t.formSuccess}</p>
                 <a
-                  href="/antonio-kiepert-cv.pdf"
+                  href={lang === 'pt' ? "/antonio-kiepert-cv.pdf" : "/antonio-kiepert-cv-en.pdf"}
                   download
                   className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-lg font-mono text-sm font-medium hover:bg-primary/90 transition-colors"
                 >
