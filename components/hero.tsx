@@ -133,7 +133,7 @@ export function Hero() {
           {t.ctaSecondary}
         </a>
         <a
-          href={lang === 'pt' ? "/antonio-kiepert-cv.pdf" : "/antonio-kiepert-cv-en.pdf"}
+          href={lang === 'pt' ? "/antonio-kiepert-cv-v2.pdf" : "/antonio-kiepert-cv-en-v2.pdf"}
           download
           className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary font-mono text-sm transition-all hover:scale-105"
         >
