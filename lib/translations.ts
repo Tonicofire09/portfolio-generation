@@ -82,7 +82,7 @@ export const translations = {
           before: "Sou um ",
           highlight: "Marketing Manager",
           after:
-            " que opera na intersecao entre estrategia, execucao e automacao. Nao apenas rodo campanhas \u2014 eu ",
+            " que opera na intersecao entre estrategia, execucao e automacao. Não apenas rodo campanhas \u2014 Eu ",
           highlight2: "projeto sistemas",
           after2:
             " que conectam marketing, produto e vendas para gerar resultado previsivel.",
@@ -478,6 +478,18 @@ export const translations = {
           ],
         },
         {
+          company: "Autonomo",
+          tabLabel: "Freelancer",
+          title: "Freelancer - Design Grafico",
+          period: "Jan 2020 - Nov 2022",
+          url: "#",
+          description: "Projetos de design e marketing digital",
+          bullets: [
+            "Prestei servicos de design grafico usando Adobe Suite e CorelDRAW.",
+            "Apoiei empresas com design, identidade visual e marketing digital.",
+          ],
+        },
+        {
           company: "Distribuidora de Racao",
           tabLabel: "Distribuidora",
           title: "Coordenador de Marketing",
@@ -487,6 +499,7 @@ export const translations = {
           bullets: [
             "Criei e implementei toda a operacao de marketing da empresa do zero, incluindo identidade visual e posicionamento.",
             "Desenvolvi o site institucional e implementei o sistema de e-commerce integrado.",
+            "Implementei o e-commerce que faturou R$ 40 mil nos primeiros 5 meses de operacao atraves de vendas online.",
             "Estruturei a presenca digital da marca com estrategias de SEO, redes sociais e campanhas pagas.",
             "Coordenei a producao de conteudo e materiais de comunicacao para canais online e offline.",
             "Gerenciei o relacionamento com fornecedores de servicos de marketing e tecnologia.",
@@ -553,6 +566,18 @@ export const translations = {
           ],
         },
         {
+          company: "Self-employed",
+          tabLabel: "Freelance",
+          title: "Freelance Graphic Designer",
+          period: "Jan 2020 - Nov 2022",
+          url: "#",
+          description: "Design and digital marketing projects",
+          bullets: [
+            "Provided graphic design services using Adobe Suite and CorelDRAW.",
+            "Supported companies with design, visual identity and digital marketing.",
+          ],
+        },
+        {
           company: "Feed Distributor",
           tabLabel: "Feed Dist.",
           title: "Marketing Coordinator",
@@ -562,6 +587,7 @@ export const translations = {
           bullets: [
             "Created and implemented the entire marketing operation from scratch, including brand identity and positioning.",
             "Developed the institutional website and implemented the integrated e-commerce system.",
+            "Implemented the e-commerce system which generated R$ 40k in revenue within the first 5 months of online operations.",
             "Structured the brand's digital presence with SEO strategies, social media and paid campaigns.",
             "Coordinated content production and communication materials for online and offline channels.",
             "Managed relationships with marketing and technology service providers.",
