@@ -3,15 +3,19 @@
 import { useState, type FormEvent } from "react"
 import { Send, MessageCircle, Mail, Linkedin } from "lucide-react"
 import { useLang } from "@/lib/language-context"
-import { translations } from "@/lib/translations"
+import { useContent } from "@/hooks/use-content"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 export function Contact() {
   const { lang } = useLang()
-  const t = translations.contact[lang]
+  const { data: content, isLoading } = useContent()
   const { ref, isVisible } = useScrollAnimation()
   const [sending, setSending] = useState(false)
   const [sent, setSent] = useState(false)
+
+  if (isLoading || !content) return null
+
+  const t = content.contact[lang as keyof typeof content.contact]
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()

@@ -1,56 +1,36 @@
 "use client"
 
 import { ArrowDown, TrendingUp, Target, Zap, Download, Sparkles } from "lucide-react"
-import { useEffect, useState } from "react"
 import { useLang } from "@/lib/language-context"
-import { translations } from "@/lib/translations"
-
-function AnimatedCounter({
-  end,
-  suffix = "",
-  duration = 2000,
-}: { end: number; suffix?: string; duration?: number }) {
-  const [count, setCount] = useState(0)
-
-  useEffect(() => {
-    let start = 0
-    const increment = end / (duration / 16)
-    const timer = setInterval(() => {
-      start += increment
-      if (start >= end) {
-        setCount(end)
-        clearInterval(timer)
-      } else {
-        setCount(Math.floor(start))
-      }
-    }, 16)
-    return () => clearInterval(timer)
-  }, [end, duration])
-
-  return (
-    <span>
-      {count}
-      {suffix}
-    </span>
-  )
-}
+import { useContent } from "@/hooks/use-content"
+import { AnimatedCounter } from "@/components/ui/animated-counter"
 
 const metricValues = [150, 100, 9]
 const metricIcons = [TrendingUp, Target, Zap]
 
 export function Hero() {
   const { lang } = useLang()
-  const t = translations.hero[lang as keyof typeof translations.hero]
+  const { data: content, isLoading } = useContent()
+
+  if (isLoading || !content) {
+    return (
+      <section className="relative min-h-[100dvh] w-full flex flex-col justify-center overflow-hidden pt-28 pb-12">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-accent/5 to-primary/10 pointer-events-none animate-pulse" />
+      </section>
+    )
+  }
+
+  const t = content.hero[lang as keyof typeof content.hero]
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+    <section className="relative min-h-[100dvh] w-full flex flex-col justify-center overflow-hidden pt-28 pb-12">
       {/* Animated gradient background - orange/purple */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-accent/5 to-primary/10 pointer-events-none" />
 
       {/* Floating gradient orbs - orange and purple */}
       <div className="absolute top-20 right-1/4 w-96 h-96 bg-gradient-to-br from-primary/15 to-accent/10 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-40 left-1/4 w-72 h-72 bg-gradient-to-br from-accent/15 to-primary/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }} />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary/5 via-accent/5 to-transparent rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[600px] h-[600px] bg-gradient-to-br from-primary/5 via-accent/5 to-transparent rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
 
       <div className="max-w-5xl relative z-10">
         {/* Tag with sparkle animation */}

@@ -9,32 +9,34 @@ import {
   ShieldCheck,
 } from "lucide-react"
 import { useLang } from "@/lib/language-context"
-import { translations } from "@/lib/translations"
+import { useContent } from "@/hooks/use-content"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 const caseIcons = [TrendingUp, Database, Target, Mail, Zap, ShieldCheck]
 
 export function Projects() {
   const { lang } = useLang()
-  const t = translations.projects[lang]
+  const { data: content, isLoading } = useContent()
   const { ref, isVisible } = useScrollAnimation()
+
+  if (isLoading || !content) return null
+
+  const t = content.projects[lang as keyof typeof content.projects]
 
   return (
     <section id="cases" className="py-24">
       <div ref={ref} className="max-w-4xl">
         <h2
-          className={`flex items-center gap-4 text-2xl font-bold text-foreground mb-4 transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className={`flex items-center gap-4 text-2xl font-bold text-foreground mb-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
         >
           <span className="text-primary font-mono text-lg font-normal">{t.sectionNumber}</span>
           {t.sectionTitle}
           <span className="hidden sm:block h-px flex-1 bg-border max-w-xs" />
         </h2>
         <p
-          className={`text-muted-foreground mb-12 max-w-2xl transition-all duration-700 delay-100 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className={`text-muted-foreground mb-12 max-w-2xl transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
         >
           {t.subtitle}
         </p>
@@ -45,9 +47,8 @@ export function Projects() {
             return (
               <div
                 key={project.title}
-                className={`group relative bg-card border border-border rounded-lg p-6 lg:p-8 hover:border-primary/30 transition-all duration-500 ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                }`}
+                className={`group relative bg-card border border-border rounded-lg p-6 lg:p-8 hover:border-primary/30 transition-all duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  }`}
                 style={{ transitionDelay: isVisible ? `${200 + i * 80}ms` : "0ms" }}
               >
                 <div className="flex flex-col lg:flex-row lg:items-start gap-5">

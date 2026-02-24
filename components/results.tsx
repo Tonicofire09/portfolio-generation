@@ -10,7 +10,7 @@ import {
 } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 import { useLang } from "@/lib/language-context"
-import { translations } from "@/lib/translations"
+import { useContent } from "@/hooks/use-content"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 function useInView(threshold = 0.3) {
@@ -76,25 +76,27 @@ const colors = [
 
 export function Results() {
   const { lang } = useLang()
-  const t = translations.results[lang]
+  const { data: content, isLoading } = useContent()
   const { ref, isVisible } = useScrollAnimation()
+
+  if (isLoading || !content) return null
+
+  const t = content.results[lang as keyof typeof content.results]
 
   return (
     <section id="resultados" className="py-24">
       <div ref={ref} className="max-w-4xl">
         <h2
-          className={`flex items-center gap-4 text-2xl font-bold text-foreground mb-4 transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className={`flex items-center gap-4 text-2xl font-bold text-foreground mb-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
         >
           <span className="text-primary font-mono text-lg font-normal">{t.sectionNumber}</span>
           {t.sectionTitle}
           <span className="hidden sm:block h-px flex-1 bg-border max-w-xs" />
         </h2>
         <p
-          className={`text-muted-foreground mb-12 max-w-2xl transition-all duration-700 delay-100 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className={`text-muted-foreground mb-12 max-w-2xl transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
         >
           {t.subtitle}
         </p>
@@ -106,9 +108,8 @@ export function Results() {
             return (
               <div
                 key={result.title}
-                className={`group bg-card border border-border rounded-lg p-6 hover:border-primary/30 transition-all duration-500 ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                }`}
+                className={`group bg-card border border-border rounded-lg p-6 hover:border-primary/30 transition-all duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  }`}
                 style={{ transitionDelay: isVisible ? `${200 + i * 100}ms` : "0ms" }}
               >
                 <div

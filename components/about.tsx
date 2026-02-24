@@ -1,14 +1,18 @@
 "use client"
 
 import { useLang } from "@/lib/language-context"
-import { translations } from "@/lib/translations"
+import { useContent } from "@/hooks/use-content"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import Image from "next/image"
 
 export function About() {
   const { lang } = useLang()
-  const t = translations.about[lang]
+  const { data: content, isLoading } = useContent()
   const { ref, isVisible } = useScrollAnimation()
+
+  if (isLoading || !content) return null
+
+  const t = content.about[lang as keyof typeof content.about]
 
   return (
     <section id="about" className="py-24">
