@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antonio Kiepert - Desenvolvedor Full Stack</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: white;
+            font-size: 10pt;
+        }
+
+        .container { max-width: 210mm; margin: 0 auto; padding: 14mm; }
+
+        header {
+            margin-bottom: 16px;
+            border-bottom: 2px solid #f97316;
+            padding-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 26pt;
+            font-weight: 700;
+            margin-bottom: 3px;
+            background: linear-gradient(135deg, #f97316 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle { font-size: 12pt; color: #f97316; font-weight: 600; margin-bottom: 8px; }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 9pt;
+            color: #666;
+            margin-top: 6px;
+        }
+
+        .contact-info a { color: #f97316; text-decoration: none; }
+
+        .section { margin-bottom: 15px; }
+
+        .section-title {
+            font-size: 12pt;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #f3e8ff 100%);
+            border-left: 3px solid #f97316;
+            padding: 10px 12px;
+            margin-bottom: 13px;
+            border-radius: 4px;
+        }
+
+        .highlight-box p { margin: 0; font-size: 9.5pt; line-height: 1.5; }
+        .highlight-box strong { color: #f97316; font-weight: 600; }
+
+        .experience-item { margin-bottom: 12px; }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+        }
+
+        .job-title { font-size: 10.5pt; font-weight: 600; color: #1a1a1a; }
+        .period { font-size: 8.5pt; color: #666; font-weight: 500; }
+
+        .company {
+            font-size: 9.5pt;
+            color: #f97316;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        .company a { color: #f97316; text-decoration: none; }
+
+        .description { font-size: 8.5pt; color: #666; font-style: italic; margin-bottom: 5px; }
+
+        ul { margin-left: 16px; margin-top: 4px; }
+        li { margin-bottom: 3px; font-size: 9pt; line-height: 1.4; }
+
+        .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+
+        .skill-category {
+            background: #f9fafb;
+            padding: 8px 10px;
+            border-radius: 4px;
+            border-left: 2px solid #f97316;
+        }
+
+        .skill-category h4 { font-size: 9.5pt; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
+        .skill-category p { font-size: 8.5pt; color: #666; line-height: 1.4; }
+
+        .projects-grid { display: flex; flex-direction: column; gap: 9px; }
+
+        .project-item {
+            background: #f9fafb;
+            border-left: 3px solid #a855f7;
+            padding: 8px 11px;
+            border-radius: 4px;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+        }
+
+        .project-item h4 { font-size: 10pt; font-weight: 600; color: #1a1a1a; }
+        .tech-tags { font-size: 7.5pt; color: #a855f7; font-weight: 500; }
+        .project-item p { font-size: 8.5pt; color: #555; line-height: 1.4; }
+        .project-item a { color: #f97316; text-decoration: none; font-size: 8pt; }
+
+        .languages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 6px; }
+
+        .language-item {
+            font-size: 9pt;
+            padding: 5px 9px;
+            background: #f9fafb;
+            border-radius: 4px;
+        }
+
+        .language-item strong { color: #f97316; }
+
+        @media print {
+            body { background: white; }
+            .container { padding: 0; }
+            .section { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <header>
+        <h1>Antonio Kiepert</h1>
+        <div class="subtitle">Desenvolvedor Full Stack | React · Next.js · TypeScript · Supabase · n8n</div>
+        <div class="contact-info">
+            <span>📧 <a href="mailto:antoniohenriquekiepert@gmail.com">antoniohenriquekiepert@gmail.com</a></span>
+            <span>📱 +55 (27) 98877-0632</span>
+            <span>🔗 <a href="https://linkedin.com/in/antoniokiepert">linkedin.com/in/antoniokiepert</a></span>
+            <span>📍 Vila Velha, ES — Disponível para modelo híbrido</span>
+        </div>
+    </header>
+
+    <div class="highlight-box">
+        <p><strong>Desenvolvedor Full Stack</strong> com projetos reais em produção. Construo sistemas completos: do
+        HTML/CSS/JS ao banco de dados. Tenho um SaaS B2B em produção (<strong>bouzr.com.br</strong>) com +100 endpoints
+        de API, multi-tenancy, pagamentos via Mercado Pago, integrações com Google e Meta APIs e banco PostgreSQL com
+        30+ tabelas. Trabalho com <strong>React, Next.js, TypeScript, Supabase e n8n</strong> no dia a dia. Background
+        em marketing digital me dá visão de produto e negócio. Inglês fluente (9 anos nos EUA).</p>
+    </div>
+
+    <section class="section">
+        <h2 class="section-title">Projetos em Produção</h2>
+        <div class="projects-grid">
+
+            <div class="project-item">
+                <div class="project-header">
+                    <h4>Bouzr — SaaS B2B para Agências de Marketing</h4>
+                    <span class="tech-tags">Next.js · TypeScript · Supabase · Mercado Pago · n8n · Inngest</span>
+                </div>
+                <p>SaaS multi-tenant completo com +100 endpoints de API REST, 30+ tabelas PostgreSQL com Row Level Security,
+                autenticação OAuth (Google, LinkedIn, Facebook), pagamentos com Mercado Pago + webhooks, integrações com
+                Google Analytics 4, Google Ads, Meta Ads e Search Console. Módulo de mineração de leads (Google Places API
+                + Hunter.io), sistema de notificações em tempo real (Supabase Realtime), kanban de campanhas, chat por
+                tarefa e painel admin multi-tenant. Planos: Trial, Starter R$47, Pro R$97, Business R$297.</p>
+                <a href="https://bouzr.com.br" target="_blank">bouzr.com.br ↗</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <h4>Arara Silk — E-commerce de Impressão Têxtil</h4>
+                    <span class="tech-tags">Next.js · TypeScript · Supabase · Mercado Pago · GA4 · Meta Pixel</span>
+                </div>
+                <p>E-commerce completo para impressão DTF, DTF UV e Serigrafia: catálogo de produtos, calculadora de
+                preço dinâmica por método de produção, pipeline de leads (cotação → qualificação → venda), integração
+                com Mercado Pago para pagamentos, GA4 + Meta Pixel para rastreamento de conversão, painel admin para
+                gestão de leads e pedidos.</p>
+                <a href="https://ararasilk.com.br" target="_blank">ararasilk.com.br ↗</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <h4>Sistema de Mineração de Leads + Disparo (SlabWare)</h4>
+                    <span class="tech-tags">n8n · Supabase · Snov.io · Zoho CRM · Email API</span>
+                </div>
+                <p>Pipeline de outbound completo: mineração de leads, enriquecimento via Snov.io, validação e
+                deduplicação de emails, segmentação no banco PostgreSQL (Supabase) e disparo automatizado de emails
+                integrado ao Zoho CRM via n8n. Sistema de retries, logs e orquestração dos serviços via shell script
+                e Docker Compose.</p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <h4>Dashboard de Produção — SlabWare (Kanban)</h4>
+                    <span class="tech-tags">Next.js · TypeScript · Supabase · Recharts · Realtime</span>
+                </div>
+                <p>Sistema de gestão de tarefas multi-tenant estilo Kanban: colunas dinâmicas, cartões com prioridade,
+                tags, anexos e checklists, sistema de comentários colaborativos, notificações em tempo real via Supabase
+                Realtime, analytics e relatórios com Recharts. Isolamento de workspace por tenant via RLS.</p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <h4>Validador e Deduplicador de Emails</h4>
+                    <span class="tech-tags">React · Python · PostgreSQL · Docker · Workers</span>
+                </div>
+                <p>Ferramenta interna com frontend React + backend Python (FastAPI) para validação em lote de listas de
+                emails: detecção de duplicatas, engine de deduplicação inteligente, merge de grupos, workers para
+                processamento assíncrono e dashboard com 4 abas de analytics. Containerizado com Docker Compose.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Experiência Profissional</h2>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <div class="job-title">Desenvolvedor Full Stack & Marketing Manager</div>
+                <div class="period">Mai 2025 – Presente</div>
+            </div>
+            <div class="company"><a href="https://slabware.com">SlabWare</a> · SaaS B2B — Indústria da Pedra (EUA & Brasil)</div>
+            <ul>
+                <li>Desenvolvo sistemas web com <strong>React, Next.js, TypeScript</strong> e <strong>Supabase (PostgreSQL)</strong></li>
+                <li>Construo formulários web, landing pages e interfaces com HTML, CSS e JavaScript</li>
+                <li>Crio automações e integrações de APIs com <strong>n8n</strong>: webhooks, fluxos de onboarding, lead scoring</li>
+                <li>Mantenho banco de dados PostgreSQL: modelagem de tabelas, migrations e queries</li>
+                <li>Integro APIs externas: Zoho CRM, Snov.io, serviços de email</li>
+                <li>Coloco sistemas em produção com autonomia: Vercel, Supabase, deploy contínuo</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <div class="job-title">Fundador & Desenvolvedor Full Stack</div>
+                <div class="period">2024 – Presente</div>
+            </div>
+            <div class="company"><a href="https://bouzr.com.br">Bouzr</a> · SaaS próprio para agências</div>
+            <ul>
+                <li>Construí do zero um SaaS B2B completo com multi-tenancy, planos de assinatura e pagamentos</li>
+                <li>+100 endpoints de API REST, 30+ tabelas PostgreSQL, autenticação OAuth, Realtime</li>
+                <li>Integrações: Mercado Pago, Google APIs (GA4, Ads, Places, Search Console), Meta Ads, Hunter.io</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <div class="job-title">Co-fundador & Desenvolvedor Web</div>
+                <div class="period">Jan 2023 – Dez 2025</div>
+            </div>
+            <div class="company"><a href="https://ararasilk.com.br">Arara Silk</a> · Estamparia Têxtil</div>
+            <ul>
+                <li>Desenvolvi e-commerce completo com catálogo, calculadora de preço, pagamentos e painel admin</li>
+                <li>Integrei Mercado Pago, GA4 e Meta Pixel para rastreamento de conversão e vendas</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <div class="job-title">Coordenador de Marketing & Dev Web</div>
+                <div class="period">2019 – 2022</div>
+            </div>
+            <div class="company">Distribuidora de Ração Excellence</div>
+            <ul>
+                <li>Desenvolvi o site institucional e implementei e-commerce com integração de pagamento e logística</li>
+                <li>Plataforma faturou <strong>R$ 40 mil nos primeiros 5 meses</strong> de operação</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Competências Técnicas</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Frontend</h4>
+                <p>React, Next.js (App Router), TypeScript, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Shadcn/UI,
+                Radix UI, Framer Motion, React Hook Form, Zod, TanStack Query</p>
+            </div>
+            <div class="skill-category">
+                <h4>Backend & Banco de Dados</h4>
+                <p>Supabase (PostgreSQL), API Routes (Next.js), REST APIs, Row Level Security (RLS), Migrations,
+                Realtime (WebSocket), Storage, Node.js, Python (básico)</p>
+            </div>
+            <div class="skill-category">
+                <h4>Integrações & Automação</h4>
+                <p>n8n (workflows, webhooks, eventos), Mercado Pago, Zoho CRM, Google APIs (GA4, Ads, Places,
+                Search Console), Meta Ads API, Snov.io, Hunter.io, Resend, Inngest</p>
+            </div>
+            <div class="skill-category">
+                <h4>Deploy & Ferramentas</h4>
+                <p>Vercel, Docker, Git, GitHub, pnpm/npm, Puppeteer, Recharts, jsPDF, VS Code, Cursor AI</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Idiomas</h2>
+        <div class="languages">
+            <div class="language-item"><strong>Português:</strong> Nativo</div>
+            <div class="language-item"><strong>Inglês:</strong> Fluente (9 anos nos EUA)</div>
+            <div class="language-item"><strong>Espanhol:</strong> Básico</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Formação</h2>
+        <div class="experience-item">
+            <div class="experience-header">
+                <div class="job-title">Tecnólogo em Marketing</div>
+                <div class="period">Out 2025 – Jul 2027 (em andamento)</div>
+            </div>
+            <div class="company">Universidade Vila Velha – UVV</div>
+        </div>
+        <div class="experience-item">
+            <div class="experience-header">
+                <div class="job-title">Ensino Médio</div>
+                <div class="period">Concluído</div>
+            </div>
+            <div class="company">EEEM Ormanda Gonçalves</div>
+        </div>
+    </section>
+
+</div>
+</body>
+</html>

@@ -50,6 +50,7 @@ export const translations = {
       ctaPrimary: "Ver resultados",
       ctaSecondary: "Fale comigo",
       downloadCv: "Baixar CV",
+      downloadCvDev: "Baixar CV Dev",
     },
     en: {
       tag: "Marketing Manager | Growth & Paid Media",
@@ -71,6 +72,7 @@ export const translations = {
       ctaPrimary: "See results",
       ctaSecondary: "Get in touch",
       downloadCv: "Download CV",
+      downloadCvDev: "Download Dev CV",
     },
   },
   about: {

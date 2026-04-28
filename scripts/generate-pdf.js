@@ -8,7 +8,8 @@ const fs = require('fs');
 
     const languages = [
         { html: 'cv-pt.html', pdf: 'antonio-kiepert-cv-v2.pdf' },
-        { html: 'cv-en.html', pdf: 'antonio-kiepert-cv-en-v2.pdf' }
+        { html: 'cv-en.html', pdf: 'antonio-kiepert-cv-en-v2.pdf' },
+        { html: 'cv-dev-pt.html', pdf: 'antonio-kiepert-cv-dev.pdf' },
     ];
 
     for (const lang of languages) {

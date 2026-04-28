@@ -120,6 +120,14 @@ export function Hero() {
           <Download className="h-4 w-4" />
           {t.downloadCv}
         </a>
+        <a
+          href="/antonio-kiepert-cv-dev.pdf"
+          download
+          className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary font-mono text-sm transition-all hover:scale-105"
+        >
+          <Download className="h-4 w-4" />
+          {t.downloadCvDev}
+        </a>
       </div>
     </section>
   )
