@@ -1,18 +1,14 @@
 "use client"
 
 import { useLang } from "@/lib/language-context"
-import { useContent } from "@/hooks/use-content"
+import { translations } from "@/lib/translations"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import Image from "next/image"
 
 export function About() {
   const { lang } = useLang()
-  const { data: content, isLoading } = useContent()
   const { ref, isVisible } = useScrollAnimation()
-
-  if (isLoading || !content) return null
-
-  const t = content.about[lang as keyof typeof content.about]
+  const t = translations.about[lang]
 
   return (
     <section id="about" className="py-24">
@@ -58,8 +54,10 @@ export function About() {
             {t.paragraphs.map((p, i) => (
               <p key={i}>
                 {p.before}
-                {p.highlight && <span className="text-foreground font-medium">{p.highlight}</span>}
-                {p.after}
+                {"highlight" in p && p.highlight && (
+                  <span className="text-foreground font-medium">{p.highlight}</span>
+                )}
+                {"after" in p && p.after}
                 {"highlight2" in p && p.highlight2 && (
                   <span className="text-foreground font-medium">{p.highlight2}</span>
                 )}

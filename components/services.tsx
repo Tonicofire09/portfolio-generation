@@ -9,19 +9,15 @@ import {
   RefreshCcw,
 } from "lucide-react"
 import { useLang } from "@/lib/language-context"
-import { useContent } from "@/hooks/use-content"
+import { translations } from "@/lib/translations"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 const icons = [TrendingUp, Target, Cog, Clapperboard, Code2, RefreshCcw]
 
 export function Services() {
   const { lang } = useLang()
-  const { data: content, isLoading } = useContent()
   const { ref, isVisible } = useScrollAnimation()
-
-  if (isLoading || !content) return null
-
-  const t = content.services[lang as keyof typeof content.services]
+  const t = translations.services[lang]
 
   return (
     <section id="servicos" className="py-24">

@@ -7,6 +7,7 @@ export const translations = {
         { label: "Sobre", href: "#about" },
         { label: "Servicos", href: "#servicos" },
         { label: "Resultados", href: "#resultados" },
+        { label: "Dashboard", href: "#dashboard" },
         { label: "Cases", href: "#cases" },
         { label: "Experiencia", href: "#experience" },
         { label: "Contato", href: "#contact" },
@@ -20,6 +21,7 @@ export const translations = {
         { label: "About", href: "#about" },
         { label: "Services", href: "#servicos" },
         { label: "Results", href: "#resultados" },
+        { label: "Dashboard", href: "#dashboard" },
         { label: "Cases", href: "#cases" },
         { label: "Experience", href: "#experience" },
         { label: "Contact", href: "#contact" },
@@ -43,8 +45,8 @@ export const translations = {
       description2end:
         ", liderando marketing para a industria da pedra nos mercados EUA e Brasil.",
       metrics: [
+        { suffix: "K+", label: "Impressoes (31 dias)" },
         { suffix: "%+", label: "ROI em Paid Media" },
-        { suffix: "%", label: "Full-funnel ownership" },
         { suffix: "+", label: "Anos nos EUA" },
       ],
       ctaPrimary: "Ver resultados",
@@ -65,8 +67,8 @@ export const translations = {
       description2end:
         ", leading marketing for the stone industry across the US and Brazil.",
       metrics: [
+        { suffix: "K+", label: "Impressions (31 days)" },
         { suffix: "%+", label: "Paid Media ROI" },
-        { suffix: "%", label: "Full-funnel ownership" },
         { suffix: "+", label: "Years in the US" },
       ],
       ctaPrimary: "See results",
@@ -245,43 +247,43 @@ export const translations = {
       sectionNumber: "03.",
       sectionTitle: "Resultados",
       subtitle:
-        "Numeros e entregas reais do meu trabalho como Marketing Manager na SlabWare \u2014 liderando crescimento para um SaaS B2B na industria da pedra.",
+        "Numeros reais da campanha ativa de Meta Ads na SlabWare (28/04 - 28/05, 31 dias). Dados extraidos do dashboard unificado GA4 + Meta Ads.",
       items: [
         {
-          metric: { end: 150, suffix: "%+" },
-          title: "ROI em Paid Media",
+          metric: { end: 225673, suffix: "" },
+          title: "Impressoes em 31 dias",
           description:
-            "Reestruturacao completa da estrategia de Meta Ads e Google Ads com otimizacao de audiencias, criativos e A/B testing sistematico.",
+            "Volume de impressoes geradas no periodo via Meta Ads (BR feed + Reddit) para o mercado SaaS B2B SlabWare.",
         },
         {
-          metric: { end: 40, suffix: "%" },
-          title: "Reducao no CAC",
+          metric: { end: 8612, suffix: "" },
+          title: "Cliques no funil",
           description:
-            "Custo de aquisicao reduzido significativamente mantendo o volume e qualidade dos leads gerados.",
+            "Cliques gerados pelas campanhas no mesmo periodo. Click-through-rate (CTR) de 3.82% - bem acima da media de B2B SaaS.",
         },
         {
-          metric: { end: 100, suffix: "%" },
-          title: "Ownership Full-Funnel",
+          metric: { text: "3.82%" },
+          title: "CTR Meta Ads",
           description:
-            "Dono de toda a operacao: demanda, paid media, automacao, onboarding, retencao e produto.",
+            "Click-through-rate de 3,82% nas campanhas de Meta Ads. Indicador direto de qualidade do criativo + segmentacao.",
         },
         {
-          metric: { text: "2 Markets" },
-          title: "EUA & Brasil",
+          metric: { text: "R$ 0,78" },
+          title: "CPC otimizado",
           description:
-            "Campanhas ativas simultaneas para mercado americano e brasileiro com copy, criativos e segmentacoes localizadas.",
+            "Custo por clique medio de R$ 0,78 no Meta Ads - resultado de otimizacao continua de audiencia, criativos e bid strategy.",
         },
         {
-          metric: { text: "Zoho CRM" },
-          title: "Stack de CRM Implementada",
+          metric: { text: "R$ 83" },
+          title: "CPA / Conversoes",
           description:
-            "Implementacao completa do Zoho CRM como stack de vendas e marketing, integrando lead management, automacoes e pipeline comercial.",
+            "58 conversoes no periodo com CPA medio de R$ 83. Funil: Meta + Reddit Ads -> landing -> Calendly demo qualificada.",
         },
         {
-          metric: { text: "Outbound" },
-          title: "Pipeline Comercial",
+          metric: { text: "1.82x" },
+          title: "ROAS unificado",
           description:
-            "Construcao de sistema de mineracao de leads e disparo de emails integrado ao CRM para abastecer a equipe comercial.",
+            "ROAS 1.82x considerando atribuicao cross-channel via GA4 (paid + organic + outbound). Investimento total no periodo: R$ 4.792.",
         },
       ],
     },
@@ -289,164 +291,174 @@ export const translations = {
       sectionNumber: "03.",
       sectionTitle: "Results",
       subtitle:
-        "Real numbers and deliverables from my work as Marketing Manager at SlabWare \u2014 leading growth for a B2B SaaS in the stone industry.",
+        "Live numbers from the active Meta Ads campaign at SlabWare (Apr 28 - May 28, 31 days). Data pulled from the unified GA4 + Meta Ads dashboard.",
       items: [
         {
-          metric: { end: 150, suffix: "%+" },
-          title: "Paid Media ROI",
+          metric: { end: 225673, suffix: "" },
+          title: "Impressions in 31 days",
           description:
-            "Complete restructuring of Meta Ads and Google Ads strategy with audience optimization, creatives and systematic A/B testing.",
+            "Impression volume generated in the period via Meta Ads (BR feed + Reddit) for SlabWare's B2B SaaS market.",
         },
         {
-          metric: { end: 40, suffix: "%" },
-          title: "CAC Reduction",
+          metric: { end: 8612, suffix: "" },
+          title: "Clicks in the funnel",
           description:
-            "Acquisition cost significantly reduced while maintaining lead volume and quality.",
+            "Clicks generated by the campaigns in the same period. Click-through-rate (CTR) of 3.82% - well above B2B SaaS average.",
         },
         {
-          metric: { end: 100, suffix: "%" },
-          title: "Full-Funnel Ownership",
+          metric: { text: "3.82%" },
+          title: "Meta Ads CTR",
           description:
-            "Full ownership of the operation: demand, paid media, automation, onboarding, retention and product.",
+            "3.82% click-through-rate on Meta Ads campaigns. Direct indicator of creative quality + audience targeting.",
         },
         {
-          metric: { text: "2 Markets" },
-          title: "US & Brazil",
+          metric: { text: "R$ 0.78" },
+          title: "Optimized CPC",
           description:
-            "Simultaneous active campaigns for US and Brazilian markets with localized copy, creatives and segmentation.",
+            "Average cost per click of R$ 0.78 on Meta Ads - the result of continuous optimization on audience, creative and bid strategy.",
         },
         {
-          metric: { text: "Zoho CRM" },
-          title: "CRM Stack Implemented",
+          metric: { text: "R$ 83" },
+          title: "CPA / Conversions",
           description:
-            "Complete Zoho CRM implementation as the sales and marketing stack, integrating lead management, automations and sales pipeline.",
+            "58 conversions in the period with avg CPA of R$ 83. Funnel: Meta + Reddit Ads -> landing -> qualified Calendly demo.",
         },
         {
-          metric: { text: "Outbound" },
-          title: "Sales Pipeline",
+          metric: { text: "1.82x" },
+          title: "Unified ROAS",
           description:
-            "Built a lead mining system and email dispatcher integrated with CRM to feed the sales team.",
+            "Unified ROAS of 1.82x considering cross-channel attribution via GA4 (paid + organic + outbound). Total spend in the period: R$ 4,792.",
         },
       ],
     },
   },
   projects: {
     pt: {
-      sectionNumber: "04.",
+      sectionNumber: "05.",
       sectionTitle: "Cases & Projetos",
       subtitle:
         "Campanhas, estrategias e sistemas que construi e liderei \u2014 combinando visao de marketing com execucao tecnica.",
       items: [
         {
           tag: "Paid Media",
-          title: "Reestruturacao de Paid Media com ROI 150%+",
+          title: "Meta Ads na SlabWare - 31 dias rodando",
           description:
-            "Reestruturei toda a estrategia de midia paga da SlabWare (Meta Ads + Google Ads + YouTube). Combinei criativos data-driven, testes A/B sistematicos e otimizacao de audiencia para alcancar ROI acima de 150% com reducao significativa no custo de aquisicao.",
-          highlights: ["Meta Ads", "Google Ads", "YouTube Ads", "A/B Testing", "Analytics"],
-          result: "ROI 150%+ | CAC reduzido",
+            "Reestruturei a operacao de Meta Ads da SlabWare combinando criativos data-driven, testes A/B sistematicos e segmentacao de alta intencao. Em 31 dias de operacao: R$ 4.792 investidos, 225.673 impressoes, 8.612 cliques, CTR de 3.82%, CPC de R$ 0,78, 58 conversoes e CPA de R$ 83. ROAS unificado de 1.82x considerando atribuicao cross-channel via GA4.",
+          highlights: ["Meta Ads", "Google Ads", "A/B Testing", "GA4", "Funnel Attribution"],
+          result: "CTR 3.82% | CPC R$ 0,78 | CPA R$ 83",
+          url: "https://slabware.com",
+        },
+        {
+          tag: "Funnel & Landing",
+          title: "Funil SlabWare - Meta + Reddit Ads -> Calendly",
+          description:
+            "Desenhei e implementei o funil completo da SlabWare: anuncios em Meta Ads e Reddit Ads direcionam para a landing page principal (slabware.com), que converte em agendamento de demo via Calendly. Mudanca chave: substituimos o Free Trial direto pelo agendamento qualificado, aumentando significativamente a qualidade dos leads que chegam ao time comercial.",
+          highlights: ["Meta Ads", "Reddit Ads", "Landing Page", "Calendly", "Lead Qualification"],
+          result: "Lead quality significativamente maior",
+          url: "https://slabware.com",
+        },
+        {
+          tag: "Lead Gen Tool",
+          title: "Bouzr - Plataforma de Lead Mining (criada por mim)",
+          description:
+            "Desenvolvi a Bouzr do zero: plataforma propria de mineracao de leads B2B que alimenta o pipeline outbound da SlabWare. O minerador captura leads qualificados via APIs publicas, enriquece com dados de empresa e dispara sequencias de email integradas ao Zoho CRM. Pipeline outbound + Meta Ads + Reddit Ads compoem a estrategia full-funnel.",
+          highlights: ["Lead Mining", "Outbound Ops", "Zoho CRM", "API Integration", "Email Automation"],
+          result: "Pipeline outbound automatizado",
+          url: "https://bouzr.com",
+        },
+        {
+          tag: "E-commerce & Ads",
+          title: "Arara Silk - Site, ADS e operacao completa",
+          description:
+            "Construi o ararasilk.com.br do zero (site, identidade, e-commerce) e rodei a operacao de Meta Ads e Google Ads para o negocio. Como co-fundador, ownei todo o funil de aquisicao - do criativo ao checkout - aplicando o mesmo playbook de performance que uso em SaaS B2B.",
+          highlights: ["Meta Ads", "Google Ads", "E-commerce", "Web Dev", "Brand"],
+          result: "Negocio proprio gerenciado end-to-end",
+          url: "https://www.ararasilk.com.br",
         },
         {
           tag: "CRM & Sales",
-          title: "Implementacao do Zoho CRM na SlabWare",
+          title: "Zoho CRM completo - APIs + Integracoes nativas",
           description:
-            "Implementei o Zoho CRM como stack completa de vendas e marketing. Configurei pipelines, automacoes de lead management, integracao com campanhas pagas e dashboards de acompanhamento para a equipe comercial.",
-          highlights: ["Zoho CRM", "Pipeline Setup", "Lead Management", "Sales Automation", "Dashboards"],
-          result: "Stack comercial integrada",
-        },
-        {
-          tag: "Growth Strategy",
-          title: "Black Friday SlabWare - Free Trial 15 Dias",
-          description:
-            "Liderei toda a estrategia de Black Friday focada em gerar oportunidades qualificadas via Free Trial de 15 dias. Gerenciei o ciclo completo: producao criativa, segmentacao de leads de alta intencao nos EUA e Brasil, automacao de onboarding e nurturing durante o trial.",
-          highlights: ["Campaign Strategy", "Segmentation", "n8n Automation", "Nurturing"],
-          result: "Full campaign ownership",
-        },
-        {
-          tag: "Outbound & CRM",
-          title: "Lead Miner + Email Dispatcher para Equipe Comercial",
-          description:
-            "Desenvolvi um sistema integrado de mineracao de leads combinado com disparador automatico de emails conectado ao CRM. Essa ferramenta alimenta o pipeline da equipe comercial automatizando prospecao e follow-up.",
-          highlights: ["n8n", "Supabase", "Email API", "CRM Integration", "TypeScript"],
-          result: "Pipeline outbound automatizado",
-        },
-        {
-          tag: "Onboarding & Retencao",
-          title: "Otimizacao de Onboarding e Controle de Churn",
-          description:
-            "Redesenhei o fluxo de onboarding para free trials SaaS focando em metricas de ativacao. Implementei lifecycle marketing automatizado com lead scoring e workflows de retencao proativa para reduzir churn.",
-          highlights: ["Onboarding Flow", "Lead Scoring", "n8n", "Lifecycle Marketing"],
-          result: "Melhoria na ativacao e retencao",
+            "Implementei o Zoho CRM como stack completa de vendas e marketing na SlabWare. Configurei pipelines, automacoes de lead management, dashboards comerciais e integracoes diretas via API com o produto SaaS - leads de ads, free trial e outbound entram no CRM com lead scoring automatico e roteamento.",
+          highlights: ["Zoho CRM", "API Integration", "Pipeline Setup", "Lead Scoring", "Sales Automation"],
+          result: "Stack comercial integrada via API",
+          url: "https://slabware.com",
         },
         {
           tag: "Marketing Ops",
-          title: "Sistema de Controle de Producao da Equipe",
+          title: "Stack tecnica - React, TypeScript, n8n, Supabase",
           description:
-            "Construi um dashboard completo de controle de producao para a equipe de marketing usando React, TypeScript e Supabase via vibe coding com IA. O sistema rastreia entregas, prazos e performance do time.",
-          highlights: ["React", "TypeScript", "Supabase", "n8n", "v0"],
-          result: "Operacao organizada e mensuravel",
+            "Diferencial unico: alem de Media Buyer, sou hands-on em codigo. Construo dashboards internos, automacoes n8n e integracoes API com React, TypeScript, Supabase. Isso significa que nao dependo de dev pra subir uma landing, testar um pixel, ajustar um webhook ou integrar uma plataforma nova - executo a operacao tecnica e a estrategia juntas.",
+          highlights: ["React", "TypeScript", "n8n", "Supabase", "API"],
+          result: "Media Buyer + Tech operator",
         },
       ],
     },
     en: {
-      sectionNumber: "04.",
+      sectionNumber: "05.",
       sectionTitle: "Cases & Projects",
       subtitle:
         "Campaigns, strategies and systems I built and led \u2014 combining marketing vision with technical execution.",
       items: [
         {
           tag: "Paid Media",
-          title: "Paid Media Restructuring with 150%+ ROI",
+          title: "SlabWare Meta Ads - Live 31-day campaign",
           description:
-            "Restructured SlabWare's entire paid media strategy (Meta Ads + Google Ads + YouTube). Combined data-driven creatives, systematic A/B testing and audience optimization to achieve 150%+ ROI with significant CAC reduction.",
-          highlights: ["Meta Ads", "Google Ads", "YouTube Ads", "A/B Testing", "Analytics"],
-          result: "150%+ ROI | Reduced CAC",
+            "Restructured SlabWare's Meta Ads operation combining data-driven creatives, systematic A/B testing and high-intent segmentation. Last 31 days: R$ 4,792 spend, 225,673 impressions, 8,612 clicks, 3.82% CTR, R$ 0.78 CPC, 58 conversions and R$ 83 CPA. Unified ROAS of 1.82x considering cross-channel attribution via GA4.",
+          highlights: ["Meta Ads", "Google Ads", "A/B Testing", "GA4", "Funnel Attribution"],
+          result: "3.82% CTR | R$ 0.78 CPC | R$ 83 CPA",
+          url: "https://slabware.com",
+        },
+        {
+          tag: "Funnel & Landing",
+          title: "SlabWare Funnel - Meta + Reddit Ads to Calendly",
+          description:
+            "Designed and shipped SlabWare's full funnel: Meta Ads and Reddit Ads drive traffic to the main landing page (slabware.com), which converts into a Calendly demo booking. Key shift: we replaced the direct Free Trial with a qualified demo booking, significantly improving the quality of leads reaching the sales team.",
+          highlights: ["Meta Ads", "Reddit Ads", "Landing Page", "Calendly", "Lead Qualification"],
+          result: "Significantly higher lead quality",
+          url: "https://slabware.com",
+        },
+        {
+          tag: "Lead Gen Tool",
+          title: "Bouzr - B2B lead mining platform I built",
+          description:
+            "Built Bouzr from scratch: a proprietary B2B lead mining platform that feeds SlabWare's outbound pipeline. The miner pulls qualified leads via public APIs, enriches with company data and triggers email sequences integrated with Zoho CRM. Outbound pipeline + Meta Ads + Reddit Ads compose the full-funnel strategy.",
+          highlights: ["Lead Mining", "Outbound Ops", "Zoho CRM", "API Integration", "Email Automation"],
+          result: "Automated outbound pipeline",
+          url: "https://bouzr.com",
+        },
+        {
+          tag: "E-commerce & Ads",
+          title: "Arara Silk - Site, ads and full operation",
+          description:
+            "Built ararasilk.com.br from scratch (site, brand, e-commerce) and ran Meta Ads + Google Ads for the business. As co-founder, owned the entire acquisition funnel - from creative to checkout - applying the same performance playbook I use for B2B SaaS.",
+          highlights: ["Meta Ads", "Google Ads", "E-commerce", "Web Dev", "Brand"],
+          result: "Own business managed end-to-end",
+          url: "https://www.ararasilk.com.br",
         },
         {
           tag: "CRM & Sales",
-          title: "Zoho CRM Implementation at SlabWare",
+          title: "Full Zoho CRM - APIs + native integrations",
           description:
-            "Implemented Zoho CRM as the complete sales and marketing stack. Configured pipelines, lead management automations, paid campaign integration and tracking dashboards for the sales team.",
-          highlights: ["Zoho CRM", "Pipeline Setup", "Lead Management", "Sales Automation", "Dashboards"],
-          result: "Integrated sales stack",
-        },
-        {
-          tag: "Growth Strategy",
-          title: "SlabWare Black Friday - 15-Day Free Trial",
-          description:
-            "Led the entire Black Friday strategy focused on generating qualified opportunities via a 15-day Free Trial. Managed the full cycle: creative production, high-intent lead segmentation in the US and Brazil, onboarding automation and nurturing during the trial.",
-          highlights: ["Campaign Strategy", "Segmentation", "n8n Automation", "Nurturing"],
-          result: "Full campaign ownership",
-        },
-        {
-          tag: "Outbound & CRM",
-          title: "Lead Miner + Email Dispatcher for Sales Team",
-          description:
-            "Built an integrated lead mining system combined with an automatic email dispatcher connected to the CRM. This tool feeds the sales team pipeline by automating prospecting and follow-up.",
-          highlights: ["n8n", "Supabase", "Email API", "CRM Integration", "TypeScript"],
-          result: "Automated outbound pipeline",
-        },
-        {
-          tag: "Onboarding & Retention",
-          title: "Onboarding Optimization & Churn Control",
-          description:
-            "Redesigned the onboarding flow for SaaS free trials focusing on activation metrics. Implemented automated lifecycle marketing with lead scoring and proactive retention workflows to reduce churn.",
-          highlights: ["Onboarding Flow", "Lead Scoring", "n8n", "Lifecycle Marketing"],
-          result: "Improved activation & retention",
+            "Implemented Zoho CRM as the complete sales and marketing stack at SlabWare. Configured pipelines, lead management automations, sales dashboards and direct API integrations with the SaaS product itself - leads from ads, free trial and outbound land in the CRM with auto lead scoring and routing.",
+          highlights: ["Zoho CRM", "API Integration", "Pipeline Setup", "Lead Scoring", "Sales Automation"],
+          result: "Sales stack integrated via API",
+          url: "https://slabware.com",
         },
         {
           tag: "Marketing Ops",
-          title: "Team Production Control System",
+          title: "Tech stack - React, TypeScript, n8n, Supabase",
           description:
-            "Built a complete production control dashboard for the marketing team using React, TypeScript and Supabase via AI vibe coding. The system tracks deliverables, deadlines and team performance.",
-          highlights: ["React", "TypeScript", "Supabase", "n8n", "v0"],
-          result: "Organized & measurable ops",
+            "Unique edge: beyond Media Buyer, I'm hands-on in code. I build internal dashboards, n8n automations and API integrations with React, TypeScript and Supabase. That means I don't wait on a dev to ship a landing page, debug a pixel, fix a webhook or wire up a new platform - I run the technical operation and the strategy together.",
+          highlights: ["React", "TypeScript", "n8n", "Supabase", "API"],
+          result: "Media Buyer + Tech operator",
         },
       ],
     },
   },
   experience: {
     pt: {
-      sectionNumber: "05.",
+      sectionNumber: "06.",
       sectionTitle: "Experiencia",
       items: [
         {
@@ -534,7 +546,7 @@ export const translations = {
       ],
     },
     en: {
-      sectionNumber: "05.",
+      sectionNumber: "06.",
       sectionTitle: "Experience",
       items: [
         {
@@ -624,7 +636,7 @@ export const translations = {
   },
   contact: {
     pt: {
-      sectionNumber: "06.",
+      sectionNumber: "07.",
       sectionLabel: "E agora?",
       title: "Vamos Conversar",
       description:
@@ -642,7 +654,7 @@ export const translations = {
       linkedinLabel: "LinkedIn",
     },
     en: {
-      sectionNumber: "06.",
+      sectionNumber: "07.",
       sectionLabel: "What's next?",
       title: "Let's Talk",
       description:

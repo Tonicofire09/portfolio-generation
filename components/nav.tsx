@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
 import { Menu, X, Globe } from "lucide-react"
 import { useLang } from "@/lib/language-context"
 import { translations } from "@/lib/translations"
@@ -10,40 +10,82 @@ export function Nav() {
   const t = translations.nav[lang]
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [activeHref, setActiveHref] = useState<string>("")
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50)
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+    let ticking = false
+    const update = () => {
+      setScrolled(window.scrollY > 50)
+      ticking = false
+    }
+    const onScroll = () => {
+      if (ticking) return
+      ticking = true
+      requestAnimationFrame(update)
+    }
+    update()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
   }, [])
+
+  useEffect(() => {
+    const ids = t.items.map((item) => item.href.replace(/^#/, ""))
+    const elements = ids
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => Boolean(el))
+    if (elements.length === 0) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
+        if (visible) setActiveHref(`#${visible.target.id}`)
+      },
+      { rootMargin: "-40% 0px -55% 0px", threshold: [0, 0.1, 0.25, 0.5] },
+    )
+
+    elements.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [t.items])
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,padding,box-shadow] duration-300 ${
         scrolled
           ? "bg-background/90 backdrop-blur-md shadow-lg shadow-background/20 py-3"
           : "bg-transparent py-5"
       }`}
     >
       <nav className="max-w-6xl mx-auto px-6 lg:px-12 flex items-center justify-between">
-        <a href="#" className="text-primary font-mono font-bold text-lg">
+        <a href="#" className="text-primary font-mono font-bold text-lg" aria-label="Home">
           {"<AK />"}
         </a>
 
-        {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-6">
           <ul className="flex items-center gap-6">
-            {t.items.map((item, i) => (
-              <li key={item.href}>
-                <a
-                  href={item.href}
-                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                >
-                  <span className="text-primary font-mono text-xs mr-1">0{i + 1}.</span>
-                  {item.label}
-                </a>
-              </li>
-            ))}
+            {t.items.map((item, i) => {
+              const active = activeHref === item.href
+              return (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    aria-current={active ? "page" : undefined}
+                    className={`group relative transition-colors text-sm ${
+                      active ? "text-primary" : "text-muted-foreground hover:text-primary"
+                    }`}
+                  >
+                    <span className="text-primary font-mono text-xs mr-1">0{i + 1}.</span>
+                    {item.label}
+                    <span
+                      className={`absolute -bottom-1 left-0 h-px bg-primary transition-all duration-300 ${
+                        active ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
+                    />
+                  </a>
+                </li>
+              )
+            })}
           </ul>
           <button
             type="button"
@@ -51,7 +93,7 @@ export function Nav() {
             className="flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors font-mono text-xs border border-border rounded px-2.5 py-1.5 hover:border-primary/40"
             aria-label={lang === "pt" ? "Switch to English" : "Mudar para Portugues"}
           >
-            <Globe className="h-3.5 w-3.5" />
+            <Globe className="h-3.5 w-3.5" aria-hidden />
             {lang === "pt" ? "EN" : "PT"}
           </button>
           <a
@@ -62,7 +104,6 @@ export function Nav() {
           </a>
         </div>
 
-        {/* Mobile Toggle */}
         <div className="flex md:hidden items-center gap-3">
           <button
             type="button"
@@ -70,13 +111,14 @@ export function Nav() {
             className="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors font-mono text-xs border border-border rounded px-2 py-1.5 hover:border-primary/40"
             aria-label={lang === "pt" ? "Switch to English" : "Mudar para Portugues"}
           >
-            <Globe className="h-3.5 w-3.5" />
+            <Globe className="h-3.5 w-3.5" aria-hidden />
             {lang === "pt" ? "EN" : "PT"}
           </button>
           <button
             type="button"
             className="text-primary"
-            onClick={() => setMobileOpen(!mobileOpen)}
+            onClick={() => setMobileOpen((v) => !v)}
+            aria-expanded={mobileOpen}
             aria-label={mobileOpen ? t.menuClose : t.menuOpen}
           >
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -84,7 +126,6 @@ export function Nav() {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       {mobileOpen && (
         <div className="md:hidden bg-card/95 backdrop-blur-md border-t border-border">
           <ul className="flex flex-col items-center gap-6 py-8">

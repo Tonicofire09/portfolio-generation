@@ -2,18 +2,14 @@
 
 import { useState } from "react"
 import { useLang } from "@/lib/language-context"
-import { useContent } from "@/hooks/use-content"
+import { translations } from "@/lib/translations"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 export function Experience() {
   const { lang } = useLang()
-  const { data: content, isLoading } = useContent()
   const [activeTab, setActiveTab] = useState(0)
   const { ref, isVisible } = useScrollAnimation()
-
-  if (isLoading || !content) return null
-
-  const t = content.experience[lang as keyof typeof content.experience]
+  const t = translations.experience[lang]
   const active = t.items[activeTab]
 
   return (

@@ -129,9 +129,32 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 96px;
 }
 
-/* Smooth transitions */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Promote large blurred orbs to their own GPU layer so they don't
+   re-rasterize on every scroll tick. */
+.hero-orb {
+  will-change: transform;
+  transform: translateZ(0);
+  contain: paint;
+}
+
+/* Default easing for transitions */
 * {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

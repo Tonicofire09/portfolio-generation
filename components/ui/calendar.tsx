@@ -53,10 +53,13 @@ function Calendar({
         day_hidden: 'invisible',
         ...classNames,
       }}
-      components={{
-        IconLeft: ({ ...props }) => <ChevronLeft className="h-4 w-4" />,
-        IconRight: ({ ...props }) => <ChevronRight className="h-4 w-4" />,
-      }}
+      // react-day-picker v9 changed Icon slot names; this file ships with shadcn and is unused by the portfolio page.
+      components={
+        {
+          IconLeft: ({ ...props }) => <ChevronLeft className="h-4 w-4" />,
+          IconRight: ({ ...props }) => <ChevronRight className="h-4 w-4" />,
+        } as any
+      }
       {...props}
     />
   )

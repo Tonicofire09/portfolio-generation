@@ -7,21 +7,18 @@ import {
   Mail,
   Zap,
   ShieldCheck,
+  ExternalLink,
 } from "lucide-react"
 import { useLang } from "@/lib/language-context"
-import { useContent } from "@/hooks/use-content"
+import { translations } from "@/lib/translations"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 const caseIcons = [TrendingUp, Database, Target, Mail, Zap, ShieldCheck]
 
 export function Projects() {
   const { lang } = useLang()
-  const { data: content, isLoading } = useContent()
   const { ref, isVisible } = useScrollAnimation()
-
-  if (isLoading || !content) return null
-
-  const t = content.projects[lang as keyof typeof content.projects]
+  const t = translations.projects[lang]
 
   return (
     <section id="cases" className="py-24">
@@ -76,7 +73,7 @@ export function Projects() {
                     <span className="sm:hidden inline-flex text-xs font-mono bg-primary/10 text-primary px-3 py-1 rounded-full mb-3">
                       {project.result}
                     </span>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                       {project.highlights.map((h) => (
                         <span
                           key={h}
@@ -85,6 +82,17 @@ export function Projects() {
                           {h}
                         </span>
                       ))}
+                      {"url" in project && project.url && (
+                        <a
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-xs font-mono bg-primary/15 text-primary px-2 py-1 rounded hover:bg-primary/25 transition-colors border border-primary/30"
+                        >
+                          {project.url.replace(/^https?:\/\/(www\.)?/, "")}
+                          <ExternalLink className="h-3 w-3" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
