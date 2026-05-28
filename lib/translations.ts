@@ -676,4 +676,572 @@ export const translations = {
     pt: "Feito por Antonio Kiepert com Next.js & TypeScript",
     en: "Built by Antonio Kiepert with Next.js & TypeScript",
   },
+  dev: {
+    pt: {
+      nav: {
+        items: [
+          { label: "Sobre", href: "#dev-about" },
+          { label: "Stack", href: "#dev-stack" },
+          { label: "Projetos", href: "#dev-projects" },
+          { label: "Experiencia", href: "#dev-experience" },
+          { label: "Contato", href: "#dev-contact" },
+        ],
+        cta: "Contato",
+        marketingLink: "Portfolio Marketing",
+        menuOpen: "Abrir menu",
+        menuClose: "Fechar menu",
+      },
+      hero: {
+        tag: "Full Stack Developer | React · Next.js · TypeScript · Supabase",
+        name: "Antonio Kiepert",
+        headline: "Construo sistemas completos do front ao banco, em producao.",
+        description1start: "Desenvolvedor full stack com ",
+        description1highlight: "projetos reais em producao",
+        description1end:
+          ". SaaS multi-tenant, e-commerce, dashboards internos e automacoes que rodam todos os dias. Stack diaria: React, Next.js, TypeScript, Supabase, n8n.",
+        description2start: "Background em marketing digital me da ",
+        description2highlight: "visao de produto e negocio",
+        description2end:
+          " antes de escrever uma linha de codigo. Ingles fluente (9 anos nos EUA).",
+        metrics: [
+          { value: "100+", label: "Endpoints API (Bouzr)" },
+          { value: "30+", label: "Tabelas PostgreSQL" },
+          { value: "5", label: "Sistemas em producao" },
+        ],
+        ctaPrimary: "Ver projetos",
+        ctaSecondary: "Fale comigo",
+        downloadCv: "Baixar CV Dev",
+      },
+      about: {
+        sectionNumber: "01.",
+        sectionTitle: "Sobre",
+        paragraphs: [
+          {
+            before: "Sou ",
+            highlight: "Full Stack Developer",
+            after:
+              " com projetos reais em producao. Construo sistemas completos: do HTML/CSS/JS ao banco de dados. Trabalho diariamente com React, Next.js, TypeScript, Supabase e n8n.",
+          },
+          {
+            before: "Mantenho o ",
+            highlight: "Bouzr",
+            after:
+              " (SaaS B2B proprio) em producao com +100 endpoints de API, multi-tenancy, pagamentos via Mercado Pago, integracoes com Google e Meta APIs e banco PostgreSQL com 30+ tabelas usando Row Level Security.",
+          },
+          {
+            before:
+              "Meu diferencial e o background em marketing digital: entendo o negocio antes de escrever codigo. Construo o que ",
+            highlight: "gera resultado",
+            after:
+              ", nao so o que e elegante. Ingles fluente (9 anos nos EUA), disponivel para remoto, hibrido ou relocacao.",
+          },
+        ],
+      },
+      stack: {
+        sectionNumber: "02.",
+        sectionTitle: "Stack Tecnica",
+        subtitle:
+          "Ferramentas que uso no dia a dia em projetos em producao.",
+        items: [
+          {
+            area: "Frontend",
+            tools: [
+              "React",
+              "Next.js (App Router)",
+              "TypeScript",
+              "JavaScript (ES6+)",
+              "HTML5 / CSS3",
+              "Tailwind CSS",
+              "Shadcn/UI",
+              "Radix UI",
+              "Framer Motion",
+              "React Hook Form",
+              "Zod",
+              "TanStack Query",
+            ],
+          },
+          {
+            area: "Backend & Banco",
+            tools: [
+              "Supabase (PostgreSQL)",
+              "Next.js API Routes",
+              "REST APIs",
+              "Row Level Security",
+              "Migrations",
+              "Realtime (WebSocket)",
+              "Storage",
+              "Node.js",
+              "Python (FastAPI basico)",
+            ],
+          },
+          {
+            area: "Integracoes & Automacao",
+            tools: [
+              "n8n (workflows, webhooks)",
+              "Mercado Pago",
+              "Zoho CRM",
+              "Google APIs (GA4, Ads, Places, Search Console)",
+              "Meta Ads API",
+              "Snov.io",
+              "Hunter.io",
+              "Resend",
+              "Inngest",
+            ],
+          },
+          {
+            area: "Deploy & Ferramentas",
+            tools: [
+              "Vercel",
+              "Docker / Docker Compose",
+              "Git / GitHub",
+              "pnpm / npm",
+              "Puppeteer",
+              "Recharts",
+              "jsPDF",
+              "VS Code",
+              "Cursor AI",
+            ],
+          },
+        ],
+      },
+      projects: {
+        sectionNumber: "03.",
+        sectionTitle: "Projetos em Producao",
+        subtitle:
+          "Sistemas reais rodando, com foco em arquitetura, integracoes e profundidade tecnica.",
+        items: [
+          {
+            title: "Bouzr — SaaS B2B para Agencias",
+            description:
+              "SaaS multi-tenant completo com +100 endpoints de API REST, 30+ tabelas PostgreSQL com Row Level Security, autenticacao OAuth (Google, LinkedIn, Facebook), pagamentos com Mercado Pago + webhooks, integracoes com Google Analytics 4, Google Ads, Meta Ads e Search Console. Modulo de mineracao de leads (Google Places API + Hunter.io), notificacoes em tempo real (Supabase Realtime), kanban de campanhas, chat por tarefa e painel admin multi-tenant.",
+            tech: ["Next.js", "TypeScript", "Supabase", "Mercado Pago", "n8n", "Inngest", "OAuth"],
+            highlights: ["+100 endpoints REST", "Multi-tenant + RLS", "OAuth + Webhooks"],
+            url: "https://bouzr.com",
+            role: "Founder & Sole Developer",
+          },
+          {
+            title: "Arara Silk — E-commerce de Impressao Textil",
+            description:
+              "E-commerce completo para impressao DTF, DTF UV e Serigrafia: catalogo de produtos, calculadora de preco dinamica por metodo de producao, pipeline de leads (cotacao → qualificacao → venda), integracao com Mercado Pago para pagamentos, GA4 + Meta Pixel para rastreamento de conversao, painel admin para gestao de leads e pedidos.",
+            tech: ["Next.js", "TypeScript", "Supabase", "Mercado Pago", "GA4", "Meta Pixel"],
+            highlights: ["E-commerce end-to-end", "Calculadora dinamica", "Admin de pedidos"],
+            url: "https://ararasilk.com.br",
+            role: "Co-founder & Web Developer",
+          },
+          {
+            title: "Lead Mining + Email Dispatcher (SlabWare)",
+            description:
+              "Pipeline de outbound completo: mineracao de leads, enriquecimento via Snov.io, validacao e deduplicacao de emails, segmentacao no banco PostgreSQL (Supabase) e disparo automatizado de emails integrado ao Zoho CRM via n8n. Sistema de retries, logs e orquestracao dos servicos via shell script e Docker Compose.",
+            tech: ["n8n", "Supabase", "Snov.io", "Zoho CRM", "Docker", "Email API"],
+            highlights: ["Pipeline outbound", "Dedup + validacao", "Orquestrado por Docker"],
+            role: "Internal Tool · SlabWare",
+          },
+          {
+            title: "Kanban de Producao (SlabWare)",
+            description:
+              "Sistema de gestao de tarefas multi-tenant estilo Kanban: colunas dinamicas, cartoes com prioridade, tags, anexos e checklists, comentarios colaborativos, notificacoes em tempo real via Supabase Realtime, analytics e relatorios com Recharts. Isolamento de workspace por tenant via RLS.",
+            tech: ["Next.js", "TypeScript", "Supabase", "Realtime", "Recharts"],
+            highlights: ["Multi-tenant RLS", "Realtime collab", "Analytics integrado"],
+            role: "Internal Tool · SlabWare",
+          },
+          {
+            title: "Validador e Deduplicador de Emails",
+            description:
+              "Ferramenta interna com frontend React + backend Python (FastAPI) para validacao em lote de listas de emails: deteccao de duplicatas, engine de deduplicacao inteligente, merge de grupos, workers para processamento assincrono e dashboard com 4 abas de analytics. Containerizado com Docker Compose.",
+            tech: ["React", "Python", "FastAPI", "PostgreSQL", "Docker", "Workers"],
+            highlights: ["Batch processing", "Workers assincronos", "Dashboard analytics"],
+            role: "Internal Tool",
+          },
+        ],
+      },
+      experience: {
+        sectionNumber: "04.",
+        sectionTitle: "Experiencia",
+        items: [
+          {
+            company: "SlabWare",
+            tabLabel: "SlabWare",
+            title: "Full Stack Developer & Marketing Manager",
+            period: "Mai 2025 → Presente",
+            url: "https://slabware.com",
+            description: "SaaS B2B na industria da pedra | Mercados EUA & Brasil",
+            bullets: [
+              "Desenvolvo sistemas web com React, Next.js, TypeScript e Supabase (PostgreSQL).",
+              "Construo formularios web, landing pages e interfaces com HTML, CSS e JavaScript.",
+              "Crio automacoes e integracoes de APIs com n8n: webhooks, fluxos de onboarding, lead scoring.",
+              "Mantenho banco de dados PostgreSQL: modelagem de tabelas, migrations e queries.",
+              "Integro APIs externas: Zoho CRM, Snov.io, servicos de email.",
+              "Coloco sistemas em producao com autonomia: Vercel, Supabase, deploy continuo.",
+            ],
+          },
+          {
+            company: "Bouzr",
+            tabLabel: "Bouzr",
+            title: "Founder & Full Stack Developer",
+            period: "2024 → Presente",
+            url: "https://bouzr.com",
+            description: "SaaS proprio para agencias de marketing",
+            bullets: [
+              "Construi do zero um SaaS B2B completo com multi-tenancy, planos de assinatura e pagamentos.",
+              "+100 endpoints de API REST, 30+ tabelas PostgreSQL, autenticacao OAuth, Realtime.",
+              "Integracoes: Mercado Pago, Google APIs (GA4, Ads, Places, Search Console), Meta Ads, Hunter.io.",
+              "Modulo de mineracao de leads, kanban de campanhas, chat por tarefa e painel admin multi-tenant.",
+            ],
+          },
+          {
+            company: "Arara Silk",
+            tabLabel: "Arara Silk",
+            title: "Co-founder & Web Developer",
+            period: "Jan 2023 → Dez 2025",
+            url: "https://ararasilk.com.br",
+            description: "Estamparia textil | E-commerce proprio",
+            bullets: [
+              "Desenvolvi e-commerce completo com catalogo, calculadora de preco, pagamentos e painel admin.",
+              "Integrei Mercado Pago, GA4 e Meta Pixel para rastreamento de conversao e vendas.",
+              "Mantive performance, SEO e UX da plataforma em producao.",
+            ],
+          },
+          {
+            company: "Excellence",
+            tabLabel: "Excellence",
+            title: "Marketing Coordinator & Web Developer",
+            period: "2019 → 2022",
+            url: "#",
+            description: "Distribuidora de racao | Primeira experiencia em desenvolvimento web",
+            bullets: [
+              "Desenvolvi o site institucional e implementei e-commerce com integracao de pagamento e logistica.",
+              "Plataforma faturou R$ 40 mil nos primeiros 5 meses de operacao.",
+              "Implementei rastreamento de conversao e fluxos de pedido.",
+            ],
+          },
+        ],
+      },
+      languages: {
+        title: "Idiomas",
+        items: [
+          { name: "Portugues", level: "Nativo" },
+          { name: "Ingles", level: "Fluente (9 anos nos EUA)" },
+          { name: "Espanhol", level: "Basico" },
+        ],
+      },
+      education: {
+        title: "Formacao",
+        items: [
+          {
+            title: "Tecnologo em Marketing",
+            org: "Universidade Vila Velha (UVV)",
+            period: "Out 2025 → Jul 2027 (em andamento)",
+          },
+          {
+            title: "Ensino Medio",
+            org: "EEEM Ormanda Goncalves",
+            period: "Concluido",
+          },
+        ],
+      },
+      contact: {
+        sectionNumber: "05.",
+        sectionLabel: "Vamos construir junto?",
+        title: "Disponivel para Oportunidades Dev",
+        description:
+          "Aberto a vagas Full Stack, Frontend Senior e roles tecnicas. Remoto, hibrido ou relocacao. Se voce busca um dev que entende produto e negocio, fala.",
+        formName: "Seu nome",
+        formEmail: "Seu email",
+        formMessage: "Sua mensagem",
+        formSend: "Enviar mensagem",
+        formSending: "Enviando...",
+        formSuccess: "Mensagem enviada! Retorno em breve.",
+        downloadCv: "Baixar CV Dev",
+        orReach: "Ou fale diretamente:",
+        whatsappLabel: "WhatsApp",
+        emailLabel: "Email",
+        linkedinLabel: "LinkedIn",
+        githubLabel: "GitHub",
+      },
+      footer: "Versao dev do portfolio · feito com Next.js, TypeScript e Supabase",
+    },
+    en: {
+      nav: {
+        items: [
+          { label: "About", href: "#dev-about" },
+          { label: "Stack", href: "#dev-stack" },
+          { label: "Projects", href: "#dev-projects" },
+          { label: "Experience", href: "#dev-experience" },
+          { label: "Contact", href: "#dev-contact" },
+        ],
+        cta: "Contact",
+        marketingLink: "Marketing portfolio",
+        menuOpen: "Open menu",
+        menuClose: "Close menu",
+      },
+      hero: {
+        tag: "Full Stack Developer | React · Next.js · TypeScript · Supabase",
+        name: "Antonio Kiepert",
+        headline: "I build complete systems from frontend to database, in production.",
+        description1start: "Full stack developer with ",
+        description1highlight: "real projects in production",
+        description1end:
+          ". Multi-tenant SaaS, e-commerce, internal dashboards and automations running every day. Daily stack: React, Next.js, TypeScript, Supabase, n8n.",
+        description2start: "A digital marketing background gives me ",
+        description2highlight: "product and business sense",
+        description2end:
+          " before writing a single line of code. Fluent English (9 years in the US).",
+        metrics: [
+          { value: "100+", label: "API endpoints (Bouzr)" },
+          { value: "30+", label: "PostgreSQL tables" },
+          { value: "5", label: "Systems in production" },
+        ],
+        ctaPrimary: "See projects",
+        ctaSecondary: "Get in touch",
+        downloadCv: "Download Dev CV",
+      },
+      about: {
+        sectionNumber: "01.",
+        sectionTitle: "About",
+        paragraphs: [
+          {
+            before: "I'm a ",
+            highlight: "Full Stack Developer",
+            after:
+              " with real projects in production. I build complete systems: from HTML/CSS/JS to the database. I work daily with React, Next.js, TypeScript, Supabase and n8n.",
+          },
+          {
+            before: "I run ",
+            highlight: "Bouzr",
+            after:
+              " (my own B2B SaaS) in production with 100+ API endpoints, multi-tenancy, Mercado Pago payments, Google and Meta API integrations and a PostgreSQL database with 30+ tables behind Row Level Security.",
+          },
+          {
+            before:
+              "My edge is a digital marketing background: I understand the business before writing code. I build what ",
+            highlight: "drives results",
+            after:
+              ", not just what's elegant. Fluent English (9 years in the US), open to remote, hybrid or relocation.",
+          },
+        ],
+      },
+      stack: {
+        sectionNumber: "02.",
+        sectionTitle: "Tech Stack",
+        subtitle:
+          "Tools I use day to day on systems in production.",
+        items: [
+          {
+            area: "Frontend",
+            tools: [
+              "React",
+              "Next.js (App Router)",
+              "TypeScript",
+              "JavaScript (ES6+)",
+              "HTML5 / CSS3",
+              "Tailwind CSS",
+              "Shadcn/UI",
+              "Radix UI",
+              "Framer Motion",
+              "React Hook Form",
+              "Zod",
+              "TanStack Query",
+            ],
+          },
+          {
+            area: "Backend & Database",
+            tools: [
+              "Supabase (PostgreSQL)",
+              "Next.js API Routes",
+              "REST APIs",
+              "Row Level Security",
+              "Migrations",
+              "Realtime (WebSocket)",
+              "Storage",
+              "Node.js",
+              "Python (FastAPI basics)",
+            ],
+          },
+          {
+            area: "Integrations & Automation",
+            tools: [
+              "n8n (workflows, webhooks)",
+              "Mercado Pago",
+              "Zoho CRM",
+              "Google APIs (GA4, Ads, Places, Search Console)",
+              "Meta Ads API",
+              "Snov.io",
+              "Hunter.io",
+              "Resend",
+              "Inngest",
+            ],
+          },
+          {
+            area: "Deploy & Tooling",
+            tools: [
+              "Vercel",
+              "Docker / Docker Compose",
+              "Git / GitHub",
+              "pnpm / npm",
+              "Puppeteer",
+              "Recharts",
+              "jsPDF",
+              "VS Code",
+              "Cursor AI",
+            ],
+          },
+        ],
+      },
+      projects: {
+        sectionNumber: "03.",
+        sectionTitle: "Projects in Production",
+        subtitle:
+          "Real systems running today, with focus on architecture, integrations and technical depth.",
+        items: [
+          {
+            title: "Bouzr — B2B SaaS for Marketing Agencies",
+            description:
+              "Full multi-tenant SaaS with 100+ REST API endpoints, 30+ PostgreSQL tables with Row Level Security, OAuth auth (Google, LinkedIn, Facebook), Mercado Pago payments + webhooks, integrations with Google Analytics 4, Google Ads, Meta Ads and Search Console. Lead mining module (Google Places API + Hunter.io), real-time notifications (Supabase Realtime), campaign kanban, per-task chat and multi-tenant admin panel.",
+            tech: ["Next.js", "TypeScript", "Supabase", "Mercado Pago", "n8n", "Inngest", "OAuth"],
+            highlights: ["100+ REST endpoints", "Multi-tenant + RLS", "OAuth + Webhooks"],
+            url: "https://bouzr.com",
+            role: "Founder & Sole Developer",
+          },
+          {
+            title: "Arara Silk — Textile Printing E-commerce",
+            description:
+              "Full e-commerce for DTF, UV DTF and Silkscreen printing: product catalog, dynamic price calculator per production method, lead pipeline (quote → qualification → sale), Mercado Pago payment integration, GA4 + Meta Pixel for conversion tracking, admin panel for lead and order management.",
+            tech: ["Next.js", "TypeScript", "Supabase", "Mercado Pago", "GA4", "Meta Pixel"],
+            highlights: ["End-to-end e-commerce", "Dynamic price calculator", "Order admin"],
+            url: "https://ararasilk.com.br",
+            role: "Co-founder & Web Developer",
+          },
+          {
+            title: "Lead Mining + Email Dispatcher (SlabWare)",
+            description:
+              "Full outbound pipeline: lead mining, enrichment via Snov.io, email validation and dedup, segmentation in the PostgreSQL database (Supabase) and automated email dispatch integrated with Zoho CRM via n8n. Retry system, logs and service orchestration via shell script and Docker Compose.",
+            tech: ["n8n", "Supabase", "Snov.io", "Zoho CRM", "Docker", "Email API"],
+            highlights: ["Outbound pipeline", "Dedup + validation", "Docker-orchestrated"],
+            role: "Internal Tool · SlabWare",
+          },
+          {
+            title: "Production Kanban (SlabWare)",
+            description:
+              "Multi-tenant Kanban-style task management system: dynamic columns, cards with priority, tags, attachments and checklists, collaborative comments, real-time notifications via Supabase Realtime, analytics and reports with Recharts. Workspace isolation per tenant via RLS.",
+            tech: ["Next.js", "TypeScript", "Supabase", "Realtime", "Recharts"],
+            highlights: ["Multi-tenant RLS", "Realtime collab", "Built-in analytics"],
+            role: "Internal Tool · SlabWare",
+          },
+          {
+            title: "Email Validator & Deduplicator",
+            description:
+              "Internal tool with React frontend + Python (FastAPI) backend for batch email list validation: duplicate detection, smart dedup engine, group merging, async workers for processing and dashboard with 4 analytics tabs. Containerized with Docker Compose.",
+            tech: ["React", "Python", "FastAPI", "PostgreSQL", "Docker", "Workers"],
+            highlights: ["Batch processing", "Async workers", "Analytics dashboard"],
+            role: "Internal Tool",
+          },
+        ],
+      },
+      experience: {
+        sectionNumber: "04.",
+        sectionTitle: "Experience",
+        items: [
+          {
+            company: "SlabWare",
+            tabLabel: "SlabWare",
+            title: "Full Stack Developer & Marketing Manager",
+            period: "May 2025 → Present",
+            url: "https://slabware.com",
+            description: "B2B SaaS for the stone industry | US & Brazil markets",
+            bullets: [
+              "Build web systems with React, Next.js, TypeScript and Supabase (PostgreSQL).",
+              "Build web forms, landing pages and interfaces with HTML, CSS and JavaScript.",
+              "Create automations and API integrations with n8n: webhooks, onboarding flows, lead scoring.",
+              "Own the PostgreSQL database: table modeling, migrations and queries.",
+              "Integrate external APIs: Zoho CRM, Snov.io, email services.",
+              "Ship systems to production autonomously: Vercel, Supabase, continuous deploy.",
+            ],
+          },
+          {
+            company: "Bouzr",
+            tabLabel: "Bouzr",
+            title: "Founder & Full Stack Developer",
+            period: "2024 → Present",
+            url: "https://bouzr.com",
+            description: "My own SaaS for marketing agencies",
+            bullets: [
+              "Built a full B2B SaaS from scratch with multi-tenancy, subscription plans and payments.",
+              "100+ REST API endpoints, 30+ PostgreSQL tables, OAuth auth, Realtime.",
+              "Integrations: Mercado Pago, Google APIs (GA4, Ads, Places, Search Console), Meta Ads, Hunter.io.",
+              "Lead mining module, campaign kanban, per-task chat and multi-tenant admin panel.",
+            ],
+          },
+          {
+            company: "Arara Silk",
+            tabLabel: "Arara Silk",
+            title: "Co-founder & Web Developer",
+            period: "Jan 2023 → Dec 2025",
+            url: "https://ararasilk.com.br",
+            description: "Textile printing business | Own e-commerce",
+            bullets: [
+              "Built full e-commerce with catalog, price calculator, payments and admin panel.",
+              "Integrated Mercado Pago, GA4 and Meta Pixel for conversion and sales tracking.",
+              "Maintained performance, SEO and UX of the platform in production.",
+            ],
+          },
+          {
+            company: "Excellence",
+            tabLabel: "Excellence",
+            title: "Marketing Coordinator & Web Developer",
+            period: "2019 → 2022",
+            url: "#",
+            description: "Feed distributor | First professional web dev experience",
+            bullets: [
+              "Built the institutional website and implemented e-commerce with payment and logistics integration.",
+              "Platform generated R$ 40k in revenue within the first 5 months of operation.",
+              "Implemented conversion tracking and order flows.",
+            ],
+          },
+        ],
+      },
+      languages: {
+        title: "Languages",
+        items: [
+          { name: "Portuguese", level: "Native" },
+          { name: "English", level: "Fluent (9 years in the US)" },
+          { name: "Spanish", level: "Basic" },
+        ],
+      },
+      education: {
+        title: "Education",
+        items: [
+          {
+            title: "Technology Degree in Marketing",
+            org: "Universidade Vila Velha (UVV)",
+            period: "Oct 2025 → Jul 2027 (in progress)",
+          },
+          {
+            title: "High School Diploma",
+            org: "EEEM Ormanda Goncalves",
+            period: "Completed",
+          },
+        ],
+      },
+      contact: {
+        sectionNumber: "05.",
+        sectionLabel: "Let's build something?",
+        title: "Open to Dev Opportunities",
+        description:
+          "Open to Full Stack, Senior Frontend and engineering roles. Remote, hybrid or relocation. If you want a dev who understands product and business, let's talk.",
+        formName: "Your name",
+        formEmail: "Your email",
+        formMessage: "Your message",
+        formSend: "Send message",
+        formSending: "Sending...",
+        formSuccess: "Message sent! I'll get back to you soon.",
+        downloadCv: "Download Dev CV",
+        orReach: "Or reach out directly:",
+        whatsappLabel: "WhatsApp",
+        emailLabel: "Email",
+        linkedinLabel: "LinkedIn",
+        githubLabel: "GitHub",
+      },
+      footer: "Dev version of the portfolio · built with Next.js, TypeScript and Supabase",
+    },
+  },
 } as const

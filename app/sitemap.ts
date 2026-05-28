@@ -17,5 +17,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
+    {
+      url: `${siteUrl}/dev`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: {
+        languages: {
+          "en-US": `${siteUrl}/dev`,
+          "pt-BR": `${siteUrl}/dev`,
+        },
+      },
+    },
   ]
 }
