@@ -43,14 +43,15 @@ function Counter({
   duration = 1400,
 }: { end: number; suffix?: string; prefix?: string; duration?: number }) {
   const { ref, inView } = useInView()
-  const [count, setCount] = useState(end)
+  // SSR/initial render shows 0 so the counter visibly animates up when scrolled into view.
+  const [count, setCount] = useState(0)
   const animated = useRef(false)
 
   useEffect(() => {
     if (!inView || animated.current) return
     animated.current = true
 
-    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setCount(end)
       return
     }

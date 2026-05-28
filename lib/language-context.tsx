@@ -13,18 +13,26 @@ const LanguageContext = createContext<LanguageContextType>({
   toggleLang: () => {},
 })
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>("en")
+const COOKIE_NAME = "lang"
+const COOKIE_MAX_AGE = 60 * 60 * 24 * 365 // 1 year
 
-  useEffect(() => {
-    const saved = window.localStorage.getItem("lang") as Lang | null
-    if (saved === "pt" || saved === "en") {
-      setLang(saved)
-      return
-    }
-    const browser = window.navigator.language?.toLowerCase() ?? ""
-    if (browser.startsWith("pt")) setLang("pt")
-  }, [])
+function writeCookie(value: Lang) {
+  try {
+    document.cookie = `${COOKIE_NAME}=${value}; path=/; max-age=${COOKIE_MAX_AGE}; samesite=lax`
+    window.localStorage.setItem("lang", value)
+  } catch {
+    // ignore (privacy mode, quota)
+  }
+}
+
+export function LanguageProvider({
+  initialLang = "en",
+  children,
+}: {
+  initialLang?: Lang
+  children: ReactNode
+}) {
+  const [lang, setLang] = useState<Lang>(initialLang)
 
   useEffect(() => {
     document.documentElement.lang = lang === "pt" ? "pt-BR" : "en-US"
@@ -33,11 +41,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const toggleLang = () =>
     setLang((prev) => {
       const next = prev === "pt" ? "en" : "pt"
-      try {
-        window.localStorage.setItem("lang", next)
-      } catch {
-        // ignore (privacy mode, quota)
-      }
+      writeCookie(next)
       return next
     })
 

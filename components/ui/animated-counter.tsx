@@ -7,7 +7,8 @@ export function AnimatedCounter({
     suffix = "",
     duration = 1600,
 }: { end: number; suffix?: string; duration?: number }) {
-    const [count, setCount] = useState(end)
+    // SSR renders 0 to avoid the "final → 0 → animate" flash on first paint.
+    const [count, setCount] = useState(0)
     const animated = useRef(false)
 
     useEffect(() => {
@@ -19,7 +20,6 @@ export function AnimatedCounter({
             return
         }
 
-        setCount(0)
         let rafId = 0
         const startTime = performance.now()
         const tick = (now: number) => {

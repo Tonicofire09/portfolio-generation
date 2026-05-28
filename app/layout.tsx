@@ -1,6 +1,7 @@
 import React from "react"
 import type { Metadata, Viewport } from "next"
 import { Inter, JetBrains_Mono } from "next/font/google"
+import { cookies, headers } from "next/headers"
 
 import "./globals.css"
 
@@ -88,13 +89,24 @@ const jsonLd = {
   sameAs: ["https://www.linkedin.com/in/antonio-kiepert"],
 }
 
-export default function RootLayout({
+async function resolveHtmlLang(): Promise<"pt-BR" | "en-US"> {
+  const cookieStore = await cookies()
+  const fromCookie = cookieStore.get("lang")?.value
+  if (fromCookie === "pt") return "pt-BR"
+  if (fromCookie === "en") return "en-US"
+  const accept = (await headers()).get("accept-language") ?? ""
+  return accept.toLowerCase().startsWith("pt") ? "pt-BR" : "en-US"
+}
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const htmlLang = await resolveHtmlLang()
+
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang={htmlLang} className="dark" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased overflow-x-hidden`}
         suppressHydrationWarning
