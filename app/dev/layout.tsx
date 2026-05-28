@@ -63,12 +63,12 @@ const jsonLd = {
 
 export default function DevLayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <div className="dev-scope min-h-screen bg-background text-foreground">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {children}
-    </>
+    </div>
   )
 }

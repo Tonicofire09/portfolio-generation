@@ -1,10 +1,8 @@
 "use client"
 
-import { ArrowDown, Code2, Database, Layers, Download, Sparkles } from "lucide-react"
+import { ArrowDown, Download, GitBranch, Circle } from "lucide-react"
 import { useLang } from "@/lib/language-context"
 import { translations } from "@/lib/translations"
-
-const metricIcons = [Code2, Database, Layers]
 
 export function DevHero() {
   const { lang } = useLang()
@@ -12,104 +10,203 @@ export function DevHero() {
 
   return (
     <section className="relative min-h-[100dvh] w-full flex flex-col justify-center overflow-hidden pt-28 pb-12">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-accent/5 to-primary/10 pointer-events-none" />
+      <div className="relative z-10 grid lg:grid-cols-[1.1fr_1fr] gap-10 items-center">
+        {/* LEFT: identity */}
+        <div>
+          <div className="flex items-center gap-2 mb-5 font-mono text-xs">
+            <span className="syntax-comment">// {t.tag}</span>
+          </div>
 
-      <div
-        aria-hidden
-        className="hero-orb absolute top-20 right-1/4 w-96 h-96 bg-gradient-to-br from-primary/15 to-accent/10 rounded-full blur-3xl animate-float motion-reduce:animate-none"
-      />
-      <div
-        aria-hidden
-        className="hero-orb absolute bottom-40 left-1/4 w-72 h-72 bg-gradient-to-br from-accent/15 to-primary/5 rounded-full blur-3xl animate-float motion-reduce:animate-none"
-        style={{ animationDelay: "1.5s" }}
-      />
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-[1.05]">
+            <span className="text-foreground">{t.name}</span>
+            <span className="caret" aria-hidden />
+          </h1>
 
-      <div className="max-w-5xl relative z-10">
-        <div className="flex items-center gap-2 mb-5 animate-fade-in-up motion-reduce:animate-none">
-          <Sparkles className="h-4 w-4 text-primary animate-pulse motion-reduce:animate-none" />
-          <p className="font-mono text-primary text-sm tracking-wider font-medium">{t.tag}</p>
+          <h2 className="text-2xl sm:text-3xl font-semibold text-foreground/90 mb-6 leading-tight max-w-2xl">
+            {t.headline}
+          </h2>
+
+          <p className="text-base text-muted-foreground max-w-xl leading-relaxed mb-4">
+            {t.description1start}
+            <span className="text-foreground font-medium">{t.description1highlight}</span>
+            {t.description1end}
+          </p>
+          <p className="text-sm text-muted-foreground max-w-xl leading-relaxed mb-8">
+            {t.description2start}
+            <span className="text-foreground font-medium">{t.description2highlight}</span>
+            {t.description2end}
+          </p>
+
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href="#dev-projects"
+              className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-md font-mono text-sm font-medium hover:bg-primary/90 transition-colors"
+            >
+              <span className="syntax-fn">$</span> {t.ctaPrimary}
+              <ArrowDown className="h-4 w-4 group-hover:translate-y-1 transition-transform" />
+            </a>
+            <a
+              href="#dev-contact"
+              className="text-foreground hover:text-primary font-mono text-sm transition-colors border border-border px-5 py-2.5 rounded-md hover:border-primary/40 hover:bg-primary/5"
+            >
+              {t.ctaSecondary}
+            </a>
+            <a
+              href="/antonio-kiepert-cv-dev.pdf"
+              download
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary font-mono text-xs transition-colors"
+            >
+              <Download className="h-4 w-4" />
+              {t.downloadCv}
+            </a>
+          </div>
         </div>
 
-        <h1
-          className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in-up motion-reduce:animate-none"
-          style={{ animationDelay: "0.1s" }}
-        >
-          <span className="text-gradient">{t.name}</span>
-        </h1>
+        {/* RIGHT: code-editor card */}
+        <div className="bg-card border border-border rounded-md shadow-2xl shadow-primary/5 overflow-hidden">
+          {/* window chrome */}
+          <div className="flex items-center justify-between px-4 py-2.5 border-b border-border bg-secondary/40">
+            <div className="window-dots" aria-hidden>
+              <span /><span /><span />
+            </div>
+            <span className="font-mono text-xs text-muted-foreground">antonio.tsx</span>
+            <span className="font-mono text-[10px] text-muted-foreground tabular-nums">UTF-8 · TS</span>
+          </div>
 
-        <h2
-          className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground mb-4 leading-tight animate-fade-in-up motion-reduce:animate-none max-w-3xl"
-          style={{ animationDelay: "0.2s" }}
-        >
-          {t.headline}
-        </h2>
+          {/* tabs */}
+          <div className="flex items-center border-b border-border bg-background/40 text-xs font-mono">
+            <span className="px-4 py-2 border-r border-border text-foreground bg-card">
+              antonio.tsx
+            </span>
+            <span className="px-4 py-2 border-r border-border text-muted-foreground/60">
+              stack.json
+            </span>
+            <span className="px-4 py-2 border-r border-border text-muted-foreground/60">
+              README.md
+            </span>
+          </div>
 
-        <p
-          className="text-lg text-muted-foreground max-w-2xl leading-relaxed mb-6 animate-fade-in-up motion-reduce:animate-none"
-          style={{ animationDelay: "0.3s" }}
-        >
-          {t.description1start}
-          <span className="text-foreground font-medium">{t.description1highlight}</span>
-          {t.description1end}
-        </p>
-        <p
-          className="text-muted-foreground leading-relaxed max-w-2xl animate-fade-in-up motion-reduce:animate-none"
-          style={{ animationDelay: "0.4s" }}
-        >
-          {t.description2start}
-          <span className="text-foreground font-medium">{t.description2highlight}</span>
-          {t.description2end}
-        </p>
-      </div>
-
-      <div
-        className="mt-12 grid grid-cols-3 gap-6 max-w-lg animate-fade-in-up motion-reduce:animate-none"
-        style={{ animationDelay: "0.5s" }}
-      >
-        {t.metrics.map((metric, i) => {
-          const Icon = metricIcons[i]
-          return (
-            <div key={metric.label} className="group text-center">
-              <div className="relative">
-                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 rounded-lg blur-xl transition-colors duration-300" />
-                <div className="relative flex flex-col items-center gap-1.5 p-3 bg-card/50 backdrop-blur-sm border border-border/50 rounded-lg hover:border-primary/40 transition-colors">
-                  <Icon className="h-4 w-4 text-primary group-hover:scale-110 transition-transform" />
-                  <span className="text-2xl sm:text-3xl font-bold text-foreground font-mono">
-                    {metric.value}
-                  </span>
-                  <p className="text-xs text-muted-foreground leading-tight">{metric.label}</p>
-                </div>
+          {/* code body */}
+          <div className="grid grid-cols-[auto_1fr] font-mono text-[13px] leading-7 bg-background/30">
+            <div className="gutter py-4">
+              {Array.from({ length: 12 }, (_, i) => (
+                <div key={i}>{i + 1}</div>
+              ))}
+            </div>
+            <div className="py-4 pl-4 pr-4 overflow-x-auto">
+              <div><span className="syntax-comment">// who am i</span></div>
+              <div>
+                <span className="syntax-keyword">const</span>{" "}
+                <span className="syntax-fn">antonio</span>{" "}
+                <span className="text-muted-foreground">=</span>{" "}
+                <span className="text-muted-foreground">{"{"}</span>
+              </div>
+              <div className="pl-4">
+                <span className="syntax-prop">role</span>
+                <span className="text-muted-foreground">:</span>{" "}
+                <span className="syntax-string">"Full Stack Developer"</span>
+                <span className="text-muted-foreground">,</span>
+              </div>
+              <div className="pl-4">
+                <span className="syntax-prop">stack</span>
+                <span className="text-muted-foreground">:</span>{" "}
+                <span className="text-muted-foreground">[</span>
+                <span className="syntax-string">"React"</span>
+                <span className="text-muted-foreground">,</span>{" "}
+                <span className="syntax-string">"Next.js"</span>
+                <span className="text-muted-foreground">,</span>{" "}
+                <span className="syntax-string">"TypeScript"</span>
+                <span className="text-muted-foreground">,</span>{" "}
+                <span className="syntax-string">"Supabase"</span>
+                <span className="text-muted-foreground">,</span>{" "}
+                <span className="syntax-string">"n8n"</span>
+                <span className="text-muted-foreground">],</span>
+              </div>
+              <div className="pl-4">
+                <span className="syntax-prop">endpoints</span>
+                <span className="text-muted-foreground">:</span>{" "}
+                <span className="syntax-number">100</span>
+                <span className="text-muted-foreground">,</span>{" "}
+                <span className="syntax-comment">// Bouzr SaaS</span>
+              </div>
+              <div className="pl-4">
+                <span className="syntax-prop">tables</span>
+                <span className="text-muted-foreground">:</span>{" "}
+                <span className="syntax-number">30</span>
+                <span className="text-muted-foreground">,</span>{" "}
+                <span className="syntax-comment">// PostgreSQL + RLS</span>
+              </div>
+              <div className="pl-4">
+                <span className="syntax-prop">inProduction</span>
+                <span className="text-muted-foreground">:</span>{" "}
+                <span className="syntax-number">5</span>
+                <span className="text-muted-foreground">,</span>{" "}
+                <span className="syntax-comment">// systems live</span>
+              </div>
+              <div className="pl-4">
+                <span className="syntax-prop">english</span>
+                <span className="text-muted-foreground">:</span>{" "}
+                <span className="syntax-string">"fluent"</span>
+                <span className="text-muted-foreground">,</span>{" "}
+                <span className="syntax-comment">// 9 yrs in the US</span>
+              </div>
+              <div className="pl-4">
+                <span className="syntax-prop">openTo</span>
+                <span className="text-muted-foreground">:</span>{" "}
+                <span className="text-muted-foreground">[</span>
+                <span className="syntax-string">"remote"</span>
+                <span className="text-muted-foreground">,</span>{" "}
+                <span className="syntax-string">"hybrid"</span>
+                <span className="text-muted-foreground">,</span>{" "}
+                <span className="syntax-string">"relocation"</span>
+                <span className="text-muted-foreground">],</span>
+              </div>
+              <div>
+                <span className="text-muted-foreground">{"}"}</span>
+                <span className="text-muted-foreground">;</span>
+              </div>
+              <div>&nbsp;</div>
+              <div>
+                <span className="syntax-keyword">export default</span>{" "}
+                <span className="syntax-fn">antonio</span>
+                <span className="text-muted-foreground">;</span>
               </div>
             </div>
-          )
-        })}
+          </div>
+
+          {/* status bar */}
+          <div className="flex items-center justify-between px-4 py-1.5 border-t border-border bg-primary/10 text-[10px] font-mono text-muted-foreground">
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1 text-primary">
+                <GitBranch className="h-3 w-3" /> main
+              </span>
+              <span>TS · React 19</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1 text-emerald-400">
+                <Circle className="h-2 w-2 fill-current" /> live
+              </span>
+              <span>Ln 1, Col 1</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div
-        className="mt-10 flex flex-wrap items-center gap-4 animate-fade-in-up motion-reduce:animate-none"
-        style={{ animationDelay: "0.6s" }}
-      >
-        <a
-          href="#dev-projects"
-          className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-mono text-sm font-medium hover:bg-primary/90 transition-colors hover:shadow-lg hover:shadow-primary/25"
-        >
-          {t.ctaPrimary}
-          <ArrowDown className="h-4 w-4 group-hover:translate-y-1 transition-transform" />
-        </a>
-        <a
-          href="#dev-contact"
-          className="text-foreground hover:text-primary font-mono text-sm transition-colors border border-border px-6 py-3 rounded-lg hover:border-primary/40 hover:bg-primary/5 backdrop-blur-sm"
-        >
-          {t.ctaSecondary}
-        </a>
-        <a
-          href="/antonio-kiepert-cv-dev.pdf"
-          download
-          className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary font-mono text-sm transition-colors"
-        >
-          <Download className="h-4 w-4" />
-          {t.downloadCv}
-        </a>
+      {/* metrics row */}
+      <div className="relative z-10 mt-12 grid grid-cols-3 gap-3 max-w-2xl">
+        {t.metrics.map((metric) => (
+          <div
+            key={metric.label}
+            className="bg-card border border-border rounded-md p-4"
+          >
+            <div className="flex items-baseline gap-1 font-mono">
+              <span className="text-2xl font-bold text-primary">{metric.value}</span>
+            </div>
+            <p className="text-[11px] text-muted-foreground mt-1 leading-tight font-mono">
+              {metric.label}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   )

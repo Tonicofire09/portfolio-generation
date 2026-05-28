@@ -13,18 +13,18 @@ export function DevExperience() {
   const langs = translations.dev[lang].languages
   const edu = translations.dev[lang].education
   const active = t.items[activeTab]
+  const num = t.sectionNumber.replace(".", "")
+  const slug = t.sectionTitle.toLowerCase().replace(/\s+/g, "_")
 
   return (
     <section id="dev-experience" className="py-24">
       <div ref={ref} className="max-w-4xl">
         <h2
-          className={`flex items-center gap-4 text-2xl font-bold text-foreground mb-10 transition-all duration-700 ${
+          className={`font-mono text-lg text-foreground mb-10 transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <span className="text-primary font-mono text-lg font-normal">{t.sectionNumber}</span>
-          {t.sectionTitle}
-          <span className="hidden sm:block h-px flex-1 bg-border max-w-xs" />
+          <span className="syntax-comment">// {num}_{slug}</span>
         </h2>
 
         <div
@@ -80,36 +80,53 @@ export function DevExperience() {
           </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-6 mt-16">
-          <div className="bg-card border border-border rounded-lg p-6">
-            <h3 className="text-foreground font-semibold text-sm mb-4 font-mono">
-              <span className="text-primary mr-2">#</span>
-              {langs.title}
-            </h3>
-            <ul className="space-y-2">
-              {langs.items.map((l) => (
-                <li key={l.name} className="flex justify-between text-sm">
-                  <span className="text-foreground">{l.name}</span>
-                  <span className="text-muted-foreground text-xs font-mono">{l.level}</span>
-                </li>
-              ))}
-            </ul>
+        <div className="grid sm:grid-cols-2 gap-4 mt-16">
+          <div className="bg-card border border-border rounded-md overflow-hidden">
+            <div className="flex items-center justify-between px-3 py-2 border-b border-border bg-secondary/40">
+              <div className="window-dots" aria-hidden>
+                <span /><span /><span />
+              </div>
+              <span className="font-mono text-[11px] text-muted-foreground">
+                languages.json
+              </span>
+              <span />
+            </div>
+            <div className="p-5">
+              <ul className="space-y-2 font-mono text-sm">
+                {langs.items.map((l) => (
+                  <li key={l.name} className="flex justify-between gap-3">
+                    <span className="syntax-prop">{l.name.toLowerCase()}</span>
+                    <span className="syntax-string">"{l.level}"</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          <div className="bg-card border border-border rounded-lg p-6">
-            <h3 className="text-foreground font-semibold text-sm mb-4 font-mono">
-              <span className="text-primary mr-2">#</span>
-              {edu.title}
-            </h3>
-            <ul className="space-y-3">
-              {edu.items.map((e) => (
-                <li key={e.title}>
-                  <p className="text-sm text-foreground">{e.title}</p>
-                  <p className="text-xs text-muted-foreground font-mono mt-0.5">{e.org}</p>
-                  <p className="text-xs text-primary font-mono mt-0.5">{e.period}</p>
-                </li>
-              ))}
-            </ul>
+          <div className="bg-card border border-border rounded-md overflow-hidden">
+            <div className="flex items-center justify-between px-3 py-2 border-b border-border bg-secondary/40">
+              <div className="window-dots" aria-hidden>
+                <span /><span /><span />
+              </div>
+              <span className="font-mono text-[11px] text-muted-foreground">
+                education.md
+              </span>
+              <span />
+            </div>
+            <div className="p-5">
+              <ul className="space-y-3">
+                {edu.items.map((e) => (
+                  <li key={e.title}>
+                    <p className="text-sm text-foreground">
+                      <span className="syntax-comment font-mono text-xs mr-1.5">##</span>
+                      {e.title}
+                    </p>
+                    <p className="text-xs text-muted-foreground font-mono mt-0.5">{e.org}</p>
+                    <p className="text-xs text-primary font-mono mt-0.5">{e.period}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

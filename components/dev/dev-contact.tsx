@@ -44,6 +44,8 @@ export function DevContact() {
     }
   }
 
+  const num = t.sectionNumber.replace(".", "")
+
   return (
     <section id="dev-contact" className="py-24">
       <div ref={ref} className="max-w-2xl mx-auto">
@@ -52,11 +54,13 @@ export function DevContact() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <p className="font-mono text-primary text-sm mb-4">
-            {t.sectionNumber} {t.sectionLabel}
+          <p className="font-mono text-sm mb-4">
+            <span className="syntax-comment">// {num}_{t.sectionLabel.toLowerCase().replace(/\s+/g, "_")}</span>
           </p>
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
+            <span className="syntax-keyword font-mono">{"<"}</span>
             {t.title}
+            <span className="syntax-keyword font-mono">{" />"}</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed">{t.description}</p>
         </div>

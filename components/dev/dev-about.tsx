@@ -8,18 +8,18 @@ export function DevAbout() {
   const { lang } = useLang()
   const { ref, isVisible } = useScrollAnimation()
   const t = translations.dev[lang].about
+  const slug = t.sectionTitle.toLowerCase().replace(/\s+/g, "_")
+  const num = t.sectionNumber.replace(".", "")
 
   return (
     <section id="dev-about" className="py-24">
       <div ref={ref} className="max-w-4xl">
         <h2
-          className={`flex items-center gap-4 text-2xl font-bold text-foreground mb-8 transition-all duration-700 ${
+          className={`font-mono text-lg text-foreground mb-8 transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <span className="text-primary font-mono text-lg font-normal">{t.sectionNumber}</span>
-          {t.sectionTitle}
-          <span className="hidden sm:block h-px flex-1 bg-border max-w-xs" />
+          <span className="syntax-comment">// {num}_{slug}</span>
         </h2>
 
         <div className="space-y-5 text-muted-foreground leading-relaxed max-w-3xl">

@@ -58,8 +58,15 @@ export function DevNav() {
       }`}
     >
       <nav className="max-w-6xl mx-auto px-6 lg:px-12 flex items-center justify-between">
-        <a href="#" className="text-primary font-mono font-bold text-lg" aria-label="Home">
-          {"<AK.dev />"}
+        <a
+          href="#"
+          className="font-mono font-bold text-lg flex items-baseline gap-0.5"
+          aria-label="Home"
+        >
+          <span className="text-muted-foreground">{"<"}</span>
+          <span className="text-foreground">AK</span>
+          <span className="text-primary">.dev</span>
+          <span className="text-muted-foreground">{" />"}</span>
         </a>
 
         <div className="hidden md:flex items-center gap-6">
@@ -75,7 +82,9 @@ export function DevNav() {
                       active ? "text-primary" : "text-muted-foreground hover:text-primary"
                     }`}
                   >
-                    <span className="text-primary font-mono text-xs mr-1">0{i + 1}.</span>
+                    <span className="text-primary font-mono text-xs mr-1">
+                      0x0{i + 1}
+                    </span>
                     {item.label}
                     <span
                       className={`absolute -bottom-1 left-0 h-px bg-primary transition-all duration-300 ${
