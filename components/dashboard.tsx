@@ -26,13 +26,13 @@ const copy: Record<"pt" | "en", Copy> = {
     subtitle:
       "Dados reais extraidos do painel unificado GA4 + Meta Ads da SlabWare. 31 dias corridos de campanha ativa.",
     liveTag: "AO VIVO",
-    period: "28/04/2026 -> 28/05/2026 (31 dias)",
+    period: "28/04/2026 → 28/05/2026 (31 dias)",
     source: "Fonte: GA4 + Meta Ads (atribuicao cross-channel)",
     funnelTitle: "Funil Cross-Platform",
     trafficTitle: "Trafego por Fonte",
     stages: [
       { label: "Impressoes", value: "225.673", rate: "3.82% CTR" },
-      { label: "Cliques", value: "8.612", rate: "117.8% click->session" },
+      { label: "Cliques", value: "8.612", rate: "117.8% click→session" },
       { label: "Sessoes (GA4)", value: "10.144", rate: "0.57% conv." },
       { label: "Conversoes", value: "58" },
     ],
@@ -59,13 +59,13 @@ const copy: Record<"pt" | "en", Copy> = {
     subtitle:
       "Real numbers pulled from SlabWare's unified GA4 + Meta Ads dashboard. 31 consecutive days of an active campaign.",
     liveTag: "LIVE",
-    period: "Apr 28, 2026 -> May 28, 2026 (31 days)",
+    period: "Apr 28, 2026 → May 28, 2026 (31 days)",
     source: "Source: GA4 + Meta Ads (cross-channel attribution)",
     funnelTitle: "Cross-Platform Funnel",
     trafficTitle: "Traffic by Source",
     stages: [
       { label: "Impressions", value: "225,673", rate: "3.82% CTR" },
-      { label: "Clicks", value: "8,612", rate: "117.8% click->session" },
+      { label: "Clicks", value: "8,612", rate: "117.8% click→session" },
       { label: "Sessions (GA4)", value: "10,144", rate: "0.57% conv." },
       { label: "Conversions", value: "58" },
     ],

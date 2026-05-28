@@ -23,7 +23,7 @@ const siteUrl = "https://antoniokiepert.com"
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Antonio Kiepert — Marketing Manager & Growth Engineer",
+    default: "Antonio Kiepert | Marketing Manager & Growth Engineer",
     template: "%s | Antonio Kiepert",
   },
   description:
@@ -54,14 +54,14 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Antonio Kiepert",
-    title: "Antonio Kiepert — Marketing Manager & Growth Engineer",
+    title: "Antonio Kiepert | Marketing Manager & Growth Engineer",
     description:
       "Building scalable marketing engines that drive pipeline and real revenue for SaaS & B2B.",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Antonio Kiepert — Marketing Manager & Growth Engineer",
+    title: "Antonio Kiepert | Marketing Manager & Growth Engineer",
     description:
       "Building scalable marketing engines that drive pipeline and real revenue for SaaS & B2B.",
   },
