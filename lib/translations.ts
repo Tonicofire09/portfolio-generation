@@ -39,7 +39,7 @@ export const translations = {
       description1start: "Especialista em ",
       description1highlight: "Growth, Paid Media e Automacao",
       description1end:
-        " para SaaS & B2B. Lidero operacoes de marketing de ponta a ponta \u2014 da geracao de demanda ao product-led growth \u2014 com mentalidade global e execucao orientada por dados.",
+        " para SaaS & B2B. Lidero operacoes de marketing de ponta a ponta (da geracao de demanda ao product-led growth) com mentalidade global e execucao orientada por dados.",
       description2start: "Atualmente na ",
       description2link: "SlabWare",
       description2end:
@@ -61,7 +61,7 @@ export const translations = {
       description1start: "Specialized in ",
       description1highlight: "Growth, Paid Media & Automation",
       description1end:
-        " for SaaS & B2B. I lead end-to-end marketing operations \u2014 from demand generation to product-led growth \u2014 with a global mindset and data-driven execution.",
+        " for SaaS & B2B. I lead end-to-end marketing operations (from demand generation to product-led growth) with a global mindset and data-driven execution.",
       description2start: "Currently at ",
       description2link: "SlabWare",
       description2end:
@@ -86,7 +86,7 @@ export const translations = {
           before: "Sou um ",
           highlight: "Marketing Manager",
           after:
-            " que opera na intersecao entre estrategia, execucao e automacao. Não apenas rodo campanhas \u2014 Eu ",
+            " que opera na intersecao entre estrategia, execucao e automacao. Não apenas rodo campanhas. Eu ",
           highlight2: "projeto sistemas",
           after2:
             " que conectam marketing, produto e vendas para gerar resultado previsivel.",
@@ -95,7 +95,7 @@ export const translations = {
           before: "Na SlabWare, reestruturei toda a operacao de Paid Media alcancando ",
           highlight: "ROI acima de 150%",
           after:
-            " com reducao significativa de custo de aquisicao. Implementei o Zoho CRM como stack de vendas e marketing, desenhei o funil completo \u2014 da geracao de demanda com free trials ate automacoes de onboarding e retencao para reduzir churn.",
+            " com reducao significativa de custo de aquisicao. Implementei o Zoho CRM como stack de vendas e marketing, desenhei o funil completo: da geracao de demanda com free trials ate automacoes de onboarding e retencao para reduzir churn.",
         },
         {
           before: "Trago uma ",
@@ -105,7 +105,7 @@ export const translations = {
         },
         {
           before:
-            "Como diferencial, uso tecnologia para construir ferramentas internas \u2014 como sistemas de controle de producao, mineradores de leads e disparadores de email integrados a CRM \u2014 usando React, TypeScript, Supabase e n8n.",
+            "Como diferencial, uso tecnologia para construir ferramentas internas (sistemas de controle de producao, mineradores de leads e disparadores de email integrados a CRM) usando React, TypeScript, Supabase e n8n.",
         },
       ],
       competencias: [
@@ -135,7 +135,7 @@ export const translations = {
           before: "I'm a ",
           highlight: "Marketing Manager",
           after:
-            " who operates at the intersection of strategy, execution and automation. I don't just run campaigns \u2014 I ",
+            " who operates at the intersection of strategy, execution and automation. I don't just run campaigns. I ",
           highlight2: "design systems",
           after2:
             " that connect marketing, product and sales to drive predictable results.",
@@ -145,7 +145,7 @@ export const translations = {
             "At SlabWare, I restructured the entire Paid Media operation achieving ",
           highlight: "ROI above 150%",
           after:
-            " with a significant reduction in acquisition costs. I implemented Zoho CRM as the sales and marketing stack, designed the complete funnel \u2014 from demand generation with free trials to onboarding and retention automations to reduce churn.",
+            " with a significant reduction in acquisition costs. I implemented Zoho CRM as the sales and marketing stack, designed the complete funnel: from demand generation with free trials to onboarding and retention automations to reduce churn.",
         },
         {
           before: "I bring a ",
@@ -155,7 +155,7 @@ export const translations = {
         },
         {
           before:
-            "As a differentiator, I use technology to build internal tools \u2014 such as production control systems, lead miners and email dispatchers integrated with CRM \u2014 using React, TypeScript, Supabase and n8n.",
+            "As a differentiator, I use technology to build internal tools (production control systems, lead miners and email dispatchers integrated with CRM) using React, TypeScript, Supabase and n8n.",
         },
       ],
       competencias: [
@@ -337,7 +337,7 @@ export const translations = {
       sectionNumber: "05.",
       sectionTitle: "Cases & Projetos",
       subtitle:
-        "Campanhas, estrategias e sistemas que construi e liderei \u2014 combinando visao de marketing com execucao tecnica.",
+        "Campanhas, estrategias e sistemas que construi e liderei, combinando visao de marketing com execucao tecnica.",
       items: [
         {
           tag: "Paid Media",
@@ -398,7 +398,7 @@ export const translations = {
       sectionNumber: "05.",
       sectionTitle: "Cases & Projects",
       subtitle:
-        "Campaigns, strategies and systems I built and led \u2014 combining marketing vision with technical execution.",
+        "Campaigns, strategies and systems I built and led, combining marketing vision with technical execution.",
       items: [
         {
           tag: "Paid Media",
@@ -640,7 +640,7 @@ export const translations = {
       sectionLabel: "E agora?",
       title: "Vamos Conversar",
       description:
-        "Estou aberto a novas oportunidades como Marketing Manager & Growth em empresas SaaS & B2B. Se voce busca alguem que une visao estrategica, execucao hands-on e automacao pra escalar resultados \u2014 entre em contato.",
+        "Estou aberto a novas oportunidades como Marketing Manager & Growth em empresas SaaS & B2B. Se voce busca alguem que une visao estrategica, execucao hands-on e automacao pra escalar resultados, entre em contato.",
       formName: "Seu nome",
       formEmail: "Seu email",
       formMessage: "Sua mensagem",
@@ -658,7 +658,7 @@ export const translations = {
       sectionLabel: "What's next?",
       title: "Let's Talk",
       description:
-        "I'm open to new opportunities as a Marketing Manager & Growth at SaaS & B2B companies. If you're looking for someone who combines strategic vision, hands-on execution and automation to scale results \u2014 reach out.",
+        "I'm open to new opportunities as a Marketing Manager & Growth at SaaS & B2B companies. If you're looking for someone who combines strategic vision, hands-on execution and automation to scale results, reach out.",
       formName: "Your name",
       formEmail: "Your email",
       formMessage: "Your message",
