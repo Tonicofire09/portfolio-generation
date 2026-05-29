@@ -33,21 +33,21 @@ export const translations = {
   },
   hero: {
     pt: {
-      tag: "Marketing Manager | Growth & Paid Media",
+      tag: "Marketing Manager | Growth & Paid Media para SaaS B2B",
       name: "Antonio Kiepert",
       headline: "Construo motores de crescimento que geram pipeline e receita real.",
-      description1start: "Especialista em ",
+      description1start: "Foco em ",
       description1highlight: "Growth, Paid Media e Automacao",
       description1end:
-        " para SaaS & B2B. Lidero operacoes de marketing de ponta a ponta (da geracao de demanda ao product-led growth) com mentalidade global e execucao orientada por dados.",
-      description2start: "Atualmente na ",
-      description2link: "SlabWare",
+        " para SaaS & B2B. Cuido da operacao de marketing de ponta a ponta na SlabWare (startup-stage SaaS, EUA + Brasil) — da geracao de demanda ao product-led growth, com execucao orientada por dados.",
+      description2start: "Diferencial: tambem ",
+      description2link: "construo as ferramentas",
       description2end:
-        ", liderando marketing para a industria da pedra nos mercados EUA e Brasil.",
+        " que rodo (React, TypeScript, Supabase, n8n). Bilingue PT/EN.",
       metrics: [
         { suffix: "K+", label: "Impressoes (31 dias)" },
-        { suffix: "%+", label: "ROI em Paid Media" },
-        { suffix: "+", label: "Anos nos EUA" },
+        { suffix: "K+", label: "Cliques (31 dias)" },
+        { suffix: "", label: "Demos qualificadas" },
       ],
       ctaPrimary: "Ver resultados",
       ctaSecondary: "Fale comigo",
@@ -55,21 +55,21 @@ export const translations = {
       downloadCvDev: "Baixar CV Dev",
     },
     en: {
-      tag: "Marketing Manager | Growth & Paid Media",
+      tag: "Marketing Manager | Growth & Paid Media for B2B SaaS",
       name: "Antonio Kiepert",
       headline: "I build growth engines that generate pipeline and real revenue.",
-      description1start: "Specialized in ",
+      description1start: "Focused on ",
       description1highlight: "Growth, Paid Media & Automation",
       description1end:
-        " for SaaS & B2B. I lead end-to-end marketing operations (from demand generation to product-led growth) with a global mindset and data-driven execution.",
-      description2start: "Currently at ",
-      description2link: "SlabWare",
+        " for SaaS & B2B. I run end-to-end marketing at SlabWare (startup-stage SaaS, US + Brazil) — from demand generation to product-led growth, with data-driven execution.",
+      description2start: "Edge: I also ",
+      description2link: "build the tools",
       description2end:
-        ", leading marketing for the stone industry across the US and Brazil.",
+        " I run (React, TypeScript, Supabase, n8n). Bilingual EN/PT.",
       metrics: [
         { suffix: "K+", label: "Impressions (31 days)" },
-        { suffix: "%+", label: "Paid Media ROI" },
-        { suffix: "+", label: "Years in the US" },
+        { suffix: "K+", label: "Clicks (31 days)" },
+        { suffix: "", label: "Qualified demos" },
       ],
       ctaPrimary: "See results",
       ctaSecondary: "Get in touch",
@@ -92,20 +92,20 @@ export const translations = {
             " que conectam marketing, produto e vendas para gerar resultado previsivel.",
         },
         {
-          before: "Na SlabWare, reestruturei toda a operacao de Paid Media alcancando ",
-          highlight: "ROI acima de 150%",
+          before: "Na SlabWare, reestruturei toda a operacao de Paid Media (Meta + Reddit). Snapshot ao vivo de 31 dias: ",
+          highlight: "CTR 3.82% e CPC de R$ 0,78",
           after:
-            " com reducao significativa de custo de aquisicao. Implementei o Zoho CRM como stack de vendas e marketing, desenhei o funil completo: da geracao de demanda com free trials ate automacoes de onboarding e retencao para reduzir churn.",
+            " (acima do benchmark B2B SaaS), 58 demos qualificadas a R$ 83/CPA. Implementei o Zoho CRM como stack de vendas e marketing e desenhei o funil completo: da geracao de demanda ate automacoes de onboarding e retencao.",
         },
         {
           before: "Trago uma ",
           highlight: "mentalidade global",
           after:
-            " com 9 anos morando nos EUA, ingles fluente e experiencia ativa rodando campanhas para mercados americano e brasileiro.",
+            ": ingles fluente (parte da formacao escolar nos EUA) e experiencia ativa rodando campanhas para mercados americano e brasileiro em paralelo.",
         },
         {
           before:
-            "Como diferencial, uso tecnologia para construir ferramentas internas (sistemas de controle de producao, mineradores de leads e disparadores de email integrados a CRM) usando React, TypeScript, Supabase e n8n.",
+            "Como diferencial, uso tecnologia para construir as ferramentas internas que opero (controle de producao, minerador de leads e disparador de email integrado ao CRM) usando React, TypeScript, Supabase e n8n. Operacao tecnica + estrategia de marketing na mesma cabeca.",
         },
       ],
       competencias: [
@@ -142,20 +142,20 @@ export const translations = {
         },
         {
           before:
-            "At SlabWare, I restructured the entire Paid Media operation achieving ",
-          highlight: "ROI above 150%",
+            "At SlabWare, I restructured the entire Paid Media operation (Meta + Reddit). Live 31-day snapshot: ",
+          highlight: "3.82% CTR and R$ 0.78 CPC",
           after:
-            " with a significant reduction in acquisition costs. I implemented Zoho CRM as the sales and marketing stack, designed the complete funnel: from demand generation with free trials to onboarding and retention automations to reduce churn.",
+            " (above B2B SaaS benchmark), 58 qualified demos at R$ 83/CPA. Implemented Zoho CRM as the sales and marketing stack and designed the complete funnel: from demand generation to onboarding and retention automations.",
         },
         {
           before: "I bring a ",
           highlight: "global mindset",
           after:
-            " with 9 years living in the US, fluent English and active experience running campaigns for both American and Brazilian markets.",
+            ": fluent English (partly schooled in the US) and active experience running campaigns for both American and Brazilian markets in parallel.",
         },
         {
           before:
-            "As a differentiator, I use technology to build internal tools (production control systems, lead miners and email dispatchers integrated with CRM) using React, TypeScript, Supabase and n8n.",
+            "As a differentiator, I use technology to build the internal tools I operate (production control, lead miner and CRM-integrated email dispatcher) using React, TypeScript, Supabase and n8n. Technical execution + marketing strategy in the same head.",
         },
       ],
       competencias: [
@@ -281,9 +281,9 @@ export const translations = {
         },
         {
           metric: { text: "1.82x" },
-          title: "ROAS unificado",
+          title: "ROAS unificado (em escala)",
           description:
-            "ROAS 1.82x considerando atribuicao cross-channel via GA4 (paid + organic + outbound). Investimento total no periodo: R$ 4.792.",
+            "ROAS 1.82x cross-channel via GA4 (paid + organic + outbound) em fase de escala da operacao. Investimento de R$ 4.792 nos 31 dias, com plano de chegar a 3x conforme aumentamos LTV via onboarding + retencao.",
         },
       ],
     },
@@ -325,9 +325,9 @@ export const translations = {
         },
         {
           metric: { text: "1.82x" },
-          title: "Unified ROAS",
+          title: "Unified ROAS (in scale-up)",
           description:
-            "Unified ROAS of 1.82x considering cross-channel attribution via GA4 (paid + organic + outbound). Total spend in the period: R$ 4,792.",
+            "1.82x cross-channel ROAS via GA4 (paid + organic + outbound) during scale-up phase. Spend of R$ 4,792 over 31 days, with a path to 3x as we lift LTV via onboarding + retention.",
         },
       ],
     },
@@ -359,11 +359,11 @@ export const translations = {
         },
         {
           tag: "Lead Gen Tool",
-          title: "Bouzr: Plataforma de Lead Mining (criada por mim)",
+          title: "Bouzr: Plataforma propria de Lead Mining (live)",
           description:
-            "Desenvolvi a Bouzr do zero: plataforma propria de mineracao de leads B2B que alimenta o pipeline outbound da SlabWare. O minerador captura leads qualificados via APIs publicas, enriquece com dados de empresa e dispara sequencias de email integradas ao Zoho CRM. Pipeline outbound + Meta Ads + Reddit Ads compoem a estrategia full-funnel.",
+            "Projeto pessoal no ar em early access: plataforma de mineracao de leads B2B que tambem alimenta o pipeline outbound da SlabWare. O minerador captura leads via APIs publicas (Google Places, Hunter.io), enriquece com dados de empresa e dispara sequencias de email integradas ao Zoho CRM. Pipeline outbound + Meta Ads + Reddit Ads compoem a estrategia full-funnel.",
           highlights: ["Lead Mining", "Outbound Ops", "Zoho CRM", "API Integration", "Email Automation"],
-          result: "Pipeline outbound automatizado",
+          result: "Live · pipeline outbound automatizado",
           url: "https://bouzr.com",
         },
         {
@@ -420,11 +420,11 @@ export const translations = {
         },
         {
           tag: "Lead Gen Tool",
-          title: "Bouzr: B2B lead mining platform I built",
+          title: "Bouzr: my own B2B lead mining platform (live)",
           description:
-            "Built Bouzr from scratch: a proprietary B2B lead mining platform that feeds SlabWare's outbound pipeline. The miner pulls qualified leads via public APIs, enriches with company data and triggers email sequences integrated with Zoho CRM. Outbound pipeline + Meta Ads + Reddit Ads compose the full-funnel strategy.",
+            "Personal project live in early access: a B2B lead mining platform that also feeds SlabWare's outbound pipeline. The miner pulls leads via public APIs (Google Places, Hunter.io), enriches with company data and triggers email sequences integrated with Zoho CRM. Outbound pipeline + Meta Ads + Reddit Ads compose the full-funnel strategy.",
           highlights: ["Lead Mining", "Outbound Ops", "Zoho CRM", "API Integration", "Email Automation"],
-          result: "Automated outbound pipeline",
+          result: "Live · automated outbound pipeline",
           url: "https://bouzr.com",
         },
         {
@@ -470,7 +470,7 @@ export const translations = {
           description: "SaaS para a industria da pedra | Mercados EUA & Brasil",
           bullets: [
             "Lidero operacoes de marketing de ponta a ponta: demanda, paid media, automacao, onboarding e product-led growth.",
-            "Reestruturei a estrategia de Paid Media (Meta + Google + YouTube) alcancando ROI acima de 150% com reducao significativa no CAC.",
+            "Reestruturei a estrategia de Paid Media (Meta + Reddit + Google) alcancando CTR 3.82% e CPC R$ 0,78 (acima do benchmark B2B SaaS), com 58 demos qualificadas a R$ 83/CPA em snapshot de 31 dias.",
             "Implementei o Zoho CRM como stack completa de vendas e marketing, configurando pipelines, automacoes e dashboards.",
             "Desenhei o funil completo de Free Trial: da aquisicao ao onboarding automatizado e retencao.",
             "Construi workflows de automacao com n8n para lifecycle marketing, lead scoring e customer success.",
@@ -558,7 +558,7 @@ export const translations = {
           description: "SaaS for the stone industry | US & Brazil markets",
           bullets: [
             "Lead end-to-end marketing operations: demand gen, paid media, automation, onboarding and product-led growth.",
-            "Restructured the Paid Media strategy (Meta + Google + YouTube) achieving 150%+ ROI with significant CAC reduction.",
+            "Restructured the Paid Media strategy (Meta + Reddit + Google) achieving 3.82% CTR and R$ 0.78 CPC (above B2B SaaS benchmark), with 58 qualified demos at R$ 83/CPA in a 31-day snapshot.",
             "Implemented Zoho CRM as the complete sales and marketing stack, configuring pipelines, automations and dashboards.",
             "Designed the complete Free Trial funnel: from acquisition to automated onboarding and retention.",
             "Built automation workflows with n8n for lifecycle marketing, lead scoring and customer success.",
@@ -694,19 +694,19 @@ export const translations = {
       hero: {
         tag: "Full Stack Developer | React · Next.js · TypeScript · Supabase",
         name: "Antonio Kiepert",
-        headline: "Construo sistemas completos do front ao banco, em producao.",
+        headline: "Construo sistemas completos do front ao banco.",
         description1start: "Desenvolvedor full stack com ",
-        description1highlight: "projetos reais em producao",
+        description1highlight: "projetos shipped em producao",
         description1end:
-          ". SaaS multi-tenant, e-commerce, dashboards internos e automacoes que rodam todos os dias. Stack diaria: React, Next.js, TypeScript, Supabase, n8n.",
+          ". E-commerce, dashboards internos, automacoes e meu SaaS proprio (Bouzr) no ar em early access. Stack diaria: React, Next.js, TypeScript, Supabase, n8n.",
         description2start: "Background em marketing digital me da ",
         description2highlight: "visao de produto e negocio",
         description2end:
-          " antes de escrever uma linha de codigo. Ingles fluente (9 anos nos EUA).",
+          " antes de escrever uma linha de codigo. Bilingue PT/EN (parte da formacao escolar nos EUA).",
         metrics: [
-          { value: "100+", label: "Endpoints API (Bouzr)" },
-          { value: "30+", label: "Tabelas PostgreSQL" },
-          { value: "5", label: "Sistemas em producao" },
+          { value: "2", label: "Sistemas proprios live" },
+          { value: "3", label: "Ferramentas internas SlabWare" },
+          { value: "PT/EN", label: "Bilingue" },
         ],
         ctaPrimary: "Ver projetos",
         ctaSecondary: "Fale comigo",
@@ -720,20 +720,20 @@ export const translations = {
             before: "Sou ",
             highlight: "Full Stack Developer",
             after:
-              " com projetos reais em producao. Construo sistemas completos: do HTML/CSS/JS ao banco de dados. Trabalho diariamente com React, Next.js, TypeScript, Supabase e n8n.",
+              " com sistemas shipped em producao. Construo do HTML/CSS/JS ao banco de dados, com foco em arquitetura limpa e integracoes. Trabalho diariamente com React, Next.js, TypeScript, Supabase e n8n.",
           },
           {
-            before: "Mantenho o ",
+            before: "Atualmente construindo o ",
             highlight: "Bouzr",
             after:
-              " (SaaS B2B proprio) em producao com +100 endpoints de API, multi-tenancy, pagamentos via Mercado Pago, integracoes com Google e Meta APIs e banco PostgreSQL com 30+ tabelas usando Row Level Security.",
+              " (SaaS B2B proprio, no ar em early access com primeiros usuarios em onboarding) com multi-tenancy via Row Level Security no Postgres, pagamentos via Mercado Pago, OAuth (Google/LinkedIn/Facebook) e integracoes com Google APIs (GA4, Ads, Places, Search Console) e Meta Ads.",
           },
           {
             before:
               "Meu diferencial e o background em marketing digital: entendo o negocio antes de escrever codigo. Construo o que ",
             highlight: "gera resultado",
             after:
-              ", nao so o que e elegante. Ingles fluente (9 anos nos EUA), disponivel para remoto, hibrido ou relocacao.",
+              ", nao so o que e elegante. Bilingue PT/EN (parte da formacao escolar nos EUA), disponivel para remoto, hibrido ou relocacao.",
           },
         ],
       },
@@ -771,7 +771,7 @@ export const translations = {
               "Realtime (WebSocket)",
               "Storage",
               "Node.js",
-              "Python (FastAPI basico)",
+              "Python / FastAPI (ferramentas internas)",
             ],
           },
           {
@@ -811,13 +811,13 @@ export const translations = {
           "Sistemas reais rodando, com foco em arquitetura, integracoes e profundidade tecnica.",
         items: [
           {
-            title: "Bouzr — SaaS B2B para Agencias",
+            title: "Bouzr — SaaS B2B para Agencias (early access)",
             description:
-              "SaaS multi-tenant completo com +100 endpoints de API REST, 30+ tabelas PostgreSQL com Row Level Security, autenticacao OAuth (Google, LinkedIn, Facebook), pagamentos com Mercado Pago + webhooks, integracoes com Google Analytics 4, Google Ads, Meta Ads e Search Console. Modulo de mineracao de leads (Google Places API + Hunter.io), notificacoes em tempo real (Supabase Realtime), kanban de campanhas, chat por tarefa e painel admin multi-tenant.",
+              "SaaS multi-tenant proprio no ar (early access, primeiros usuarios em onboarding). Stack: Next.js + Supabase com Row Level Security para isolamento por tenant, autenticacao OAuth (Google, LinkedIn, Facebook), pagamentos Mercado Pago + webhooks, integracoes com Google APIs (GA4, Ads, Places, Search Console) e Meta Ads. Modulos: mineracao de leads (Google Places + Hunter.io), kanban de campanhas, notificacoes realtime via Supabase, chat por tarefa e painel admin multi-tenant.",
             tech: ["Next.js", "TypeScript", "Supabase", "Mercado Pago", "n8n", "Inngest", "OAuth"],
-            highlights: ["+100 endpoints REST", "Multi-tenant + RLS", "OAuth + Webhooks"],
+            highlights: ["Multi-tenant + RLS", "OAuth + Webhooks", "Live · early access"],
             url: "https://bouzr.com",
-            role: "Founder & Sole Developer",
+            role: "Projeto pessoal · Solo dev",
           },
           {
             title: "Arara Silk — E-commerce de Impressao Textil",
@@ -875,17 +875,17 @@ export const translations = {
             ],
           },
           {
-            company: "Bouzr",
+            company: "Bouzr (projeto pessoal)",
             tabLabel: "Bouzr",
-            title: "Founder & Full Stack Developer",
-            period: "2024 → Presente",
+            title: "Solo Developer · Projeto pessoal",
+            period: "2024 → Presente (live em early access)",
             url: "https://bouzr.com",
-            description: "SaaS proprio para agencias de marketing",
+            description: "SaaS B2B proprio no ar, primeiros usuarios em onboarding",
             bullets: [
-              "Construi do zero um SaaS B2B completo com multi-tenancy, planos de assinatura e pagamentos.",
-              "+100 endpoints de API REST, 30+ tabelas PostgreSQL, autenticacao OAuth, Realtime.",
-              "Integracoes: Mercado Pago, Google APIs (GA4, Ads, Places, Search Console), Meta Ads, Hunter.io.",
-              "Modulo de mineracao de leads, kanban de campanhas, chat por tarefa e painel admin multi-tenant.",
+              "Construi do zero um SaaS multi-tenant com planos de assinatura e pagamentos, hoje no ar (early access) com primeiros usuarios em onboarding.",
+              "Multi-tenancy via Row Level Security no Postgres, autenticacao OAuth (Google/LinkedIn/Facebook), notificacoes Realtime.",
+              "Integracoes via API: Mercado Pago (pagamentos + webhooks), Google APIs (GA4, Ads, Places, Search Console), Meta Ads, Hunter.io.",
+              "Modulos: mineracao de leads, kanban de campanhas, chat por tarefa e painel admin multi-tenant.",
             ],
           },
           {
@@ -920,7 +920,7 @@ export const translations = {
         title: "Idiomas",
         items: [
           { name: "Portugues", level: "Nativo" },
-          { name: "Ingles", level: "Fluente (9 anos nos EUA)" },
+          { name: "Ingles", level: "Fluente (parte da formacao nos EUA)" },
           { name: "Espanhol", level: "Basico" },
         ],
       },
@@ -977,19 +977,19 @@ export const translations = {
       hero: {
         tag: "Full Stack Developer | React · Next.js · TypeScript · Supabase",
         name: "Antonio Kiepert",
-        headline: "I build complete systems from frontend to database, in production.",
+        headline: "I build complete systems from frontend to database.",
         description1start: "Full stack developer with ",
-        description1highlight: "real projects in production",
+        description1highlight: "systems shipped to production",
         description1end:
-          ". Multi-tenant SaaS, e-commerce, internal dashboards and automations running every day. Daily stack: React, Next.js, TypeScript, Supabase, n8n.",
+          ". E-commerce, internal dashboards, automations and my own SaaS (Bouzr) live in early access. Daily stack: React, Next.js, TypeScript, Supabase, n8n.",
         description2start: "A digital marketing background gives me ",
         description2highlight: "product and business sense",
         description2end:
-          " before writing a single line of code. Fluent English (9 years in the US).",
+          " before writing a single line of code. Bilingual EN/PT (partly schooled in the US).",
         metrics: [
-          { value: "100+", label: "API endpoints (Bouzr)" },
-          { value: "30+", label: "PostgreSQL tables" },
-          { value: "5", label: "Systems in production" },
+          { value: "2", label: "Personal systems live" },
+          { value: "3", label: "Internal tools at SlabWare" },
+          { value: "EN/PT", label: "Bilingual" },
         ],
         ctaPrimary: "See projects",
         ctaSecondary: "Get in touch",
@@ -1003,20 +1003,20 @@ export const translations = {
             before: "I'm a ",
             highlight: "Full Stack Developer",
             after:
-              " with real projects in production. I build complete systems: from HTML/CSS/JS to the database. I work daily with React, Next.js, TypeScript, Supabase and n8n.",
+              " with systems shipped to production. I build from HTML/CSS/JS to the database, focused on clean architecture and integrations. I work daily with React, Next.js, TypeScript, Supabase and n8n.",
           },
           {
-            before: "I run ",
+            before: "Currently building ",
             highlight: "Bouzr",
             after:
-              " (my own B2B SaaS) in production with 100+ API endpoints, multi-tenancy, Mercado Pago payments, Google and Meta API integrations and a PostgreSQL database with 30+ tables behind Row Level Security.",
+              " (my own B2B SaaS, live in early access with first users onboarding): multi-tenancy via Row Level Security on Postgres, Mercado Pago payments, OAuth (Google/LinkedIn/Facebook), integrations with Google APIs (GA4, Ads, Places, Search Console) and Meta Ads.",
           },
           {
             before:
               "My edge is a digital marketing background: I understand the business before writing code. I build what ",
             highlight: "drives results",
             after:
-              ", not just what's elegant. Fluent English (9 years in the US), open to remote, hybrid or relocation.",
+              ", not just what's elegant. Bilingual EN/PT (partly schooled in the US), open to remote, hybrid or relocation.",
           },
         ],
       },
@@ -1054,7 +1054,7 @@ export const translations = {
               "Realtime (WebSocket)",
               "Storage",
               "Node.js",
-              "Python (FastAPI basics)",
+              "Python / FastAPI (internal tools)",
             ],
           },
           {
@@ -1094,13 +1094,13 @@ export const translations = {
           "Real systems running today, with focus on architecture, integrations and technical depth.",
         items: [
           {
-            title: "Bouzr — B2B SaaS for Marketing Agencies",
+            title: "Bouzr — B2B SaaS for Marketing Agencies (early access)",
             description:
-              "Full multi-tenant SaaS with 100+ REST API endpoints, 30+ PostgreSQL tables with Row Level Security, OAuth auth (Google, LinkedIn, Facebook), Mercado Pago payments + webhooks, integrations with Google Analytics 4, Google Ads, Meta Ads and Search Console. Lead mining module (Google Places API + Hunter.io), real-time notifications (Supabase Realtime), campaign kanban, per-task chat and multi-tenant admin panel.",
+              "My own multi-tenant SaaS live in early access with first users onboarding. Stack: Next.js + Supabase with Row Level Security for tenant isolation, OAuth auth (Google, LinkedIn, Facebook), Mercado Pago payments + webhooks, integrations with Google APIs (GA4, Ads, Places, Search Console) and Meta Ads. Modules: lead mining (Google Places + Hunter.io), campaign kanban, Supabase Realtime notifications, per-task chat and multi-tenant admin panel.",
             tech: ["Next.js", "TypeScript", "Supabase", "Mercado Pago", "n8n", "Inngest", "OAuth"],
-            highlights: ["100+ REST endpoints", "Multi-tenant + RLS", "OAuth + Webhooks"],
+            highlights: ["Multi-tenant + RLS", "OAuth + Webhooks", "Live · early access"],
             url: "https://bouzr.com",
-            role: "Founder & Sole Developer",
+            role: "Personal project · Solo dev",
           },
           {
             title: "Arara Silk — Textile Printing E-commerce",
@@ -1158,17 +1158,17 @@ export const translations = {
             ],
           },
           {
-            company: "Bouzr",
+            company: "Bouzr (personal project)",
             tabLabel: "Bouzr",
-            title: "Founder & Full Stack Developer",
-            period: "2024 → Present",
+            title: "Solo Developer · Personal project",
+            period: "2024 → Present (live · early access)",
             url: "https://bouzr.com",
-            description: "My own SaaS for marketing agencies",
+            description: "My own B2B SaaS live, first users onboarding",
             bullets: [
-              "Built a full B2B SaaS from scratch with multi-tenancy, subscription plans and payments.",
-              "100+ REST API endpoints, 30+ PostgreSQL tables, OAuth auth, Realtime.",
-              "Integrations: Mercado Pago, Google APIs (GA4, Ads, Places, Search Console), Meta Ads, Hunter.io.",
-              "Lead mining module, campaign kanban, per-task chat and multi-tenant admin panel.",
+              "Built a multi-tenant SaaS from scratch with subscription plans and payments, currently live in early access with first users onboarding.",
+              "Multi-tenancy via Row Level Security on Postgres, OAuth auth (Google/LinkedIn/Facebook), Realtime notifications.",
+              "API integrations: Mercado Pago (payments + webhooks), Google APIs (GA4, Ads, Places, Search Console), Meta Ads, Hunter.io.",
+              "Modules: lead mining, campaign kanban, per-task chat and multi-tenant admin panel.",
             ],
           },
           {
@@ -1203,7 +1203,7 @@ export const translations = {
         title: "Languages",
         items: [
           { name: "Portuguese", level: "Native" },
-          { name: "English", level: "Fluent (9 years in the US)" },
+          { name: "English", level: "Fluent (partly schooled in the US)" },
           { name: "Spanish", level: "Basic" },
         ],
       },

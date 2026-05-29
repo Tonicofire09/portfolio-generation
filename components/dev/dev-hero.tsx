@@ -123,32 +123,35 @@ export function DevHero() {
                 <span className="text-muted-foreground">],</span>
               </div>
               <div className="pl-4">
-                <span className="syntax-prop">endpoints</span>
+                <span className="syntax-prop">building</span>
                 <span className="text-muted-foreground">:</span>{" "}
-                <span className="syntax-number">100</span>
+                <span className="syntax-string">"Bouzr"</span>
                 <span className="text-muted-foreground">,</span>{" "}
-                <span className="syntax-comment">// Bouzr SaaS</span>
+                <span className="syntax-comment">// B2B SaaS · live in early access</span>
               </div>
               <div className="pl-4">
-                <span className="syntax-prop">tables</span>
+                <span className="syntax-prop">db</span>
                 <span className="text-muted-foreground">:</span>{" "}
-                <span className="syntax-number">30</span>
+                <span className="syntax-string">"PostgreSQL + RLS"</span>
                 <span className="text-muted-foreground">,</span>{" "}
-                <span className="syntax-comment">// PostgreSQL + RLS</span>
+                <span className="syntax-comment">// multi-tenant</span>
               </div>
               <div className="pl-4">
-                <span className="syntax-prop">inProduction</span>
+                <span className="syntax-prop">shipped</span>
                 <span className="text-muted-foreground">:</span>{" "}
                 <span className="syntax-number">5</span>
                 <span className="text-muted-foreground">,</span>{" "}
-                <span className="syntax-comment">// systems live</span>
+                <span className="syntax-comment">// 2 personal + 3 SlabWare internal</span>
               </div>
               <div className="pl-4">
-                <span className="syntax-prop">english</span>
+                <span className="syntax-prop">languages</span>
                 <span className="text-muted-foreground">:</span>{" "}
-                <span className="syntax-string">"fluent"</span>
+                <span className="text-muted-foreground">[</span>
+                <span className="syntax-string">"PT"</span>
                 <span className="text-muted-foreground">,</span>{" "}
-                <span className="syntax-comment">// 9 yrs in the US</span>
+                <span className="syntax-string">"EN"</span>
+                <span className="text-muted-foreground">],</span>{" "}
+                <span className="syntax-comment">// bilingual, partly schooled in US</span>
               </div>
               <div className="pl-4">
                 <span className="syntax-prop">openTo</span>

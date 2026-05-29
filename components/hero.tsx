@@ -5,7 +5,7 @@ import { useLang } from "@/lib/language-context"
 import { translations } from "@/lib/translations"
 import { AnimatedCounter } from "@/components/ui/animated-counter"
 
-const metricValues = [225, 150, 9]
+const metricValues = [225, 9, 58]
 const metricIcons = [TrendingUp, Target, Zap]
 
 export function Hero() {
