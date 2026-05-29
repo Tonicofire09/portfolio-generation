@@ -111,7 +111,7 @@ export function DevNav() {
             aria-label={lang === "pt" ? "Switch to English" : "Mudar para Portugues"}
           >
             <Globe className="h-3.5 w-3.5" aria-hidden />
-            {lang === "pt" ? "EN" : "PT"}
+            {lang === "pt" ? "PT" : "EN"}
           </button>
           <a
             href="#dev-contact"
@@ -129,7 +129,7 @@ export function DevNav() {
             aria-label={lang === "pt" ? "Switch to English" : "Mudar para Portugues"}
           >
             <Globe className="h-3.5 w-3.5" aria-hidden />
-            {lang === "pt" ? "EN" : "PT"}
+            {lang === "pt" ? "PT" : "EN"}
           </button>
           <button
             type="button"
